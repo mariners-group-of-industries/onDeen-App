@@ -1,5 +1,5 @@
 /* OnDeen Admin Console - deliberately dependency free so the Railway service is easy to operate. */
-const API_BASE = (window.ONDEEN_API_URL || 'https://api-production-517c1.up.railway.app').replace(/\/$/, '');
+const API_BASE = (window.ONDEEN_API_URL || 'https://ondeen-app-production.up.railway.app').replace(/\/$/, '');
 
 const state = {
   view: 'overview',

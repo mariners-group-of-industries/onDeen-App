@@ -5,9 +5,9 @@ import urllib.error
 import urllib.request
 
 
-BASE_URL = os.getenv("ONDEEN_E2E_BASE_URL", "https://api-production-517c1.up.railway.app").rstrip("/")
+BASE_URL = os.getenv("ONDEEN_E2E_BASE_URL", "https://ondeen-app-production.up.railway.app").rstrip("/")
 TIMEZONE = os.getenv("ONDEEN_E2E_TIMEZONE", "Europe/Paris")
-EXPECTED_IMAGE_HOST = os.getenv("ONDEEN_E2E_IMAGE_HOST", "api-production-517c1.up.railway.app")
+EXPECTED_IMAGE_HOST = os.getenv("ONDEEN_E2E_IMAGE_HOST", "ondeen-app-production.up.railway.app")
 ANDROID_VERSION = os.getenv("ONDEEN_E2E_ANDROID_VERSION", "1.7")
 
 
@@ -289,7 +289,7 @@ def main():
             "sub": "railway-e2e-organizer-google",
             "email": "org@gmail.com",
             "name": "Railway Organizer",
-            "profile_image": "https://api-production-517c1.up.railway.app/uploads/seed/org-profile.jpg",
+            "profile_image": "https://ondeen-app-production.up.railway.app/uploads/seed/org-profile.jpg",
         },
         auth_token=auth_token,
         label="organizer Google existing",

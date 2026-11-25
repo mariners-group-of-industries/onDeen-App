@@ -13,7 +13,7 @@ var isAppExpired = false
 
 enum APIURLType: String {
     case storeURL = "https://apps.apple.com/us/app/ondeen/id6740039443"
-    case liveApi = "https://api-production-517c1.up.railway.app/" // - live Railway backend
+    case liveApi = "https://ondeen-app-production.up.railway.app/" // - live Railway backend
 //    case liveApi = "http://35.154.40.168/"
 //    case liveApi = "http://43.205.18.14:8080/" // Staging
     

@@ -9,7 +9,7 @@ import { BASE_URL } from '../../helpers/Constant';
 
 const getShareBaseUrl = () => {
     const backendUrl = String(BASE_URL || '').replace(/\/+$/, '');
-    return backendUrl || 'https://api-production-517c1.up.railway.app';
+    return backendUrl || 'https://ondeen-app-production.up.railway.app';
 };
 
 export default function ShareIconComponent({ eventDetail = {}, imageUrl }) {

@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 DEST_DIR="${ONDEEN_APK_DEST_DIR:-$HOME/Downloads/SHARED}"
-BACKEND_URL="${ONDEEN_RAILWAY_BACKEND_URL:-https://api-production-517c1.up.railway.app}"
+BACKEND_URL="${ONDEEN_RAILWAY_BACKEND_URL:-https://ondeen-app-production.up.railway.app}"
 SERVER_PORT="${ONDEEN_DOWNLOAD_PORT:-8765}"
 USER_APK="OnDeenUser-real-debug.apk"
 USER_MANIFEST="OnDeenUser-real-debug.txt"

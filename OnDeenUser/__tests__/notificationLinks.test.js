@@ -15,11 +15,11 @@ describe('notification links', () => {
 
   it('extracts several independently tappable links without swallowing punctuation', () => {
     const parts = extractNotificationLinks(
-      'Event https://api-production-517c1.up.railway.app/open?id=1, website www.example.com and profile ondeen://user/4.',
+      'Event https://ondeen-app-production.up.railway.app/open?id=1, website www.example.com and profile ondeen://user/4.',
     );
 
     expect(parts.filter(part => part.type === 'link')).toEqual([
-      expect.objectContaining({ url: 'https://api-production-517c1.up.railway.app/open?id=1' }),
+      expect.objectContaining({ url: 'https://ondeen-app-production.up.railway.app/open?id=1' }),
       expect.objectContaining({ url: 'https://www.example.com' }),
       expect.objectContaining({ url: 'ondeen://user/4' }),
     ]);
@@ -28,7 +28,7 @@ describe('notification links', () => {
   });
 
   it('recognises the canonical Railway host even when the app uses a local bridge', () => {
-    expect(isOnDeenUrl('https://api-production-517c1.up.railway.app/open?id=1')).toBe(true);
+    expect(isOnDeenUrl('https://ondeen-app-production.up.railway.app/open?id=1')).toBe(true);
     expect(isOnDeenUrl('https://example.com/help')).toBe(false);
   });
 
@@ -49,7 +49,7 @@ describe('notification links', () => {
     });
 
     await expect(openNotificationLink(
-      'https://api-production-517c1.up.railway.app/open?id=1',
+      'https://ondeen-app-production.up.railway.app/open?id=1',
       navigation,
       { fetchImpl, baseUrl: 'http://127.0.0.1:8765', authToken: 'auth', bearerToken: 'bearer' },
     )).resolves.toEqual({ ok: true });

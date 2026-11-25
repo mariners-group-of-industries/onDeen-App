@@ -215,7 +215,7 @@ The runner listens on port `8088` and prints the machine's LAN URL. To restart i
 
 | Target | URL/configuration |
 | --- | --- |
-| Existing Railway review API | `https://api-production-517c1.up.railway.app` |
+| Existing Railway review API | `https://ondeen-app-production.up.railway.app` |
 | Local API from the same computer or an iOS simulator | `http://127.0.0.1:8088` |
 | Local API from a physical phone | The computer's LAN address, such as `http://192.168.1.23:8088`; both devices must be on the same network |
 | Local API from the standard Android emulator | `http://10.0.2.2:8088`, or a deliberately configured `adb reverse` connection |
@@ -237,7 +237,7 @@ ONDEEN_REAL_BACKEND_URL=http://192.168.1.23:8088 ./build.sh realDebug
 Replace the example address with the URL printed by your backend. To build against the review API:
 
 ```bash
-ONDEEN_REAL_BACKEND_URL=https://api-production-517c1.up.railway.app ./build.sh realDebug
+ONDEEN_REAL_BACKEND_URL=https://ondeen-app-production.up.railway.app ./build.sh realDebug
 ```
 
 Use `userRealDebug` or `organiserRealDebug` instead of `realDebug` to build one app.

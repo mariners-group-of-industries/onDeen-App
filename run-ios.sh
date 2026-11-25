@@ -9,7 +9,7 @@ ORGANISER_SIMULATOR_NAME="${ONDEEN_ORGANISER_IOS_SIMULATOR:-iPhone 17 Pro}"
 LAUNCH_WAIT_SECONDS="${ONDEEN_IOS_LAUNCH_WAIT_SECONDS:-6}"
 RESET_APP_DATA="${ONDEEN_IOS_RESET_APP_DATA:-1}"
 USE_BUNDLED_JS="${ONDEEN_IOS_USE_BUNDLED_JS:-1}"
-RAILWAY_BACKEND_URL="${ONDEEN_IOS_BACKEND_URL:-${ONDEEN_REAL_BACKEND_URL:-https://api-production-517c1.up.railway.app}}"
+RAILWAY_BACKEND_URL="${ONDEEN_IOS_BACKEND_URL:-${ONDEEN_REAL_BACKEND_URL:-https://ondeen-app-production.up.railway.app}}"
 export RCT_NEW_ARCH_ENABLED=0
 
 show_usage() {
@@ -36,7 +36,7 @@ Metro simulator builds start separate Metro servers when explicitly requested:
   - organiser: http://127.0.0.1:8082
 
 Bundled simulator builds use Railway by default:
-  https://api-production-517c1.up.railway.app
+  https://ondeen-app-production.up.railway.app
 
 Use the same backend URL as Android real-debug builds with:
   ONDEEN_REAL_BACKEND_URL=http://YOUR_IP:8088 ./run-ios.sh user

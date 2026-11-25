@@ -81,7 +81,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data
                     android:scheme="https"
-                    android:host="api-production-517c1.up.railway.app"
+                    android:host="ondeen-app-production.up.railway.app"
                     android:pathPrefix="/open" />
             </intent-filter>
 

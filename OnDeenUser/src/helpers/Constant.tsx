@@ -16,7 +16,7 @@ export const PAYMENTKEY = ITS_LIVE ? STRIPE_LIVE_PUBLISHABLE_KEY : STRIPE_TEST_P
 // Keep local/debug APKs usable while bundled FCM config is not available.
 // Set this to true only when testing push delivery with valid FCM mobile config.
 export const ENABLE_FCM_NOTIFICATIONS = false;
-export const BASE_PRODUCTION_URL = 'https://api-production-517c1.up.railway.app';
+export const BASE_PRODUCTION_URL = 'https://ondeen-app-production.up.railway.app';
 const BUNDLED_BACKEND_URL =
   typeof globalThis !== 'undefined' ? (globalThis as any).__ONDEEN_BASE_URL__ : '';
 export const BASE_URL =

@@ -4,7 +4,7 @@ from urllib.parse import urlencode
 from flask import has_request_context, request
 
 
-DEFAULT_PUBLIC_BASE_URL = "https://api-production-517c1.up.railway.app"
+DEFAULT_PUBLIC_BASE_URL = "https://ondeen-app-production.up.railway.app"
 
 
 def public_base_url():

@@ -428,7 +428,7 @@ export const bookingData = [
   },
 ];
 // Default API used when no backend URL is bundled (e.g. plain `npm start`).
-export const BASE_PRODUCTION_URL = 'https://api-production-517c1.up.railway.app';
+export const BASE_PRODUCTION_URL = 'https://ondeen-app-production.up.railway.app';
 // Build-time override, same mechanism as OnDeenUser: build.sh (Android,
 // ONDEEN_REAL_BACKEND_URL) and run-ios.sh prepend
 // `globalThis.__ONDEEN_BASE_URL__ = "<url>";` to the JS bundle, so the backend

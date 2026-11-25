@@ -216,7 +216,7 @@ export const getDebugApiResponse = ({
         event_id: 1,
         type: 7,
         title: 'Debug event link',
-        message: 'Open this seeded event: https://api-production-517c1.up.railway.app/open?id=1',
+        message: 'Open this seeded event: https://ondeen-app-production.up.railway.app/open?id=1',
         seen: 0,
       },
     ]);
