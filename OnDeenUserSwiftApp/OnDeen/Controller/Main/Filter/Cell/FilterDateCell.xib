@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FilterDateCell" rowHeight="61" id="KGk-i7-Jjw" customClass="FilterDateCell" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cwA-11-hQw">
+                        <rect key="frame" x="0.0" y="5" width="320" height="52"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beK-Is-Je1">
+                                <rect key="frame" x="0.0" y="0.0" width="157" height="52"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="moa-o2-7Be">
+                                        <rect key="frame" x="110" y="15.666666666666668" width="21" height="21.000000000000004"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="moa-o2-7Be" secondAttribute="height" id="fe9-iC-yTr"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6y-tL-4C0" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="17.666666666666668" width="78" height="17.000000000000004"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="F3F0F7"/>
+                                <constraints>
+                                    <constraint firstItem="j6y-tL-4C0" firstAttribute="centerY" secondItem="beK-Is-Je1" secondAttribute="centerY" id="4Fc-FC-wiW"/>
+                                    <constraint firstItem="moa-o2-7Be" firstAttribute="centerY" secondItem="beK-Is-Je1" secondAttribute="centerY" id="Xte-q9-lYX"/>
+                                    <constraint firstAttribute="height" constant="52" id="epU-yE-OO3"/>
+                                    <constraint firstAttribute="trailing" secondItem="moa-o2-7Be" secondAttribute="trailing" constant="26" id="gpZ-ml-lGP"/>
+                                    <constraint firstItem="j6y-tL-4C0" firstAttribute="leading" secondItem="beK-Is-Je1" secondAttribute="leading" constant="24" id="mox-vs-kKF"/>
+                                    <constraint firstItem="moa-o2-7Be" firstAttribute="leading" secondItem="j6y-tL-4C0" secondAttribute="trailing" constant="8" id="qIS-CF-EMi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-UH-MRY">
+                                <rect key="frame" x="163" y="0.0" width="157" height="52"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_calendar" translatesAutoresizingMaskIntoConstraints="NO" id="guZ-zv-aK4">
+                                        <rect key="frame" x="110" y="15.666666666666668" width="21" height="21.000000000000004"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="guZ-zv-aK4" secondAttribute="height" id="0Cm-Qs-FrD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHK-D1-Ogh" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                        <rect key="frame" x="24" y="17.666666666666668" width="78" height="17.000000000000004"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="F3F0F7"/>
+                                <constraints>
+                                    <constraint firstItem="iHK-D1-Ogh" firstAttribute="leading" secondItem="c2K-UH-MRY" secondAttribute="leading" constant="24" id="KQw-jm-r7R"/>
+                                    <constraint firstItem="guZ-zv-aK4" firstAttribute="leading" secondItem="iHK-D1-Ogh" secondAttribute="trailing" constant="8" id="Rft-3v-Jec"/>
+                                    <constraint firstAttribute="height" constant="52" id="cSv-Iu-lbD"/>
+                                    <constraint firstItem="iHK-D1-Ogh" firstAttribute="centerY" secondItem="c2K-UH-MRY" secondAttribute="centerY" id="eG6-Bq-zwn"/>
+                                    <constraint firstAttribute="trailing" secondItem="guZ-zv-aK4" secondAttribute="trailing" constant="26" id="qAd-Ux-REJ"/>
+                                    <constraint firstItem="guZ-zv-aK4" firstAttribute="centerY" secondItem="c2K-UH-MRY" secondAttribute="centerY" id="uzY-Bg-yv2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="cwA-11-hQw" secondAttribute="trailing" id="XiN-AG-c5V"/>
+                    <constraint firstItem="cwA-11-hQw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YHU-0T-KPR"/>
+                    <constraint firstAttribute="bottom" secondItem="cwA-11-hQw" secondAttribute="bottom" constant="4" id="cDe-sa-H4i"/>
+                    <constraint firstItem="cwA-11-hQw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="coG-98-HIS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="endView" destination="c2K-UH-MRY" id="2Id-xW-fDE"/>
+                <outlet property="lblEnd" destination="iHK-D1-Ogh" id="dA5-fj-9dy"/>
+                <outlet property="lblStart" destination="j6y-tL-4C0" id="CQn-rr-08M"/>
+                <outlet property="startView" destination="beK-Is-Je1" id="uYC-7V-Gbe"/>
+            </connections>
+            <point key="canvasLocation" x="-35.114503816793892" y="-27.112676056338028"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_calendar" width="21" height="20"/>
+        <namedColor name="F3F0F7">
+            <color red="0.95300000905990601" green="0.94099998474121094" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

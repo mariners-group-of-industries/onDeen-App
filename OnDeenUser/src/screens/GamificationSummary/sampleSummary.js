@@ -1,0 +1,40 @@
+export const sampleGamificationSummary = {
+  id: null,
+  event: {
+    title: 'Forty Hadith - Thursday Class',
+    category_title: 'Knowledge',
+    session_date: new Date().toISOString().slice(0, 10),
+    session_hours: 2,
+    journey_level: 'Advanced',
+  },
+  xp: {
+    total: 3269,
+    earned: 320,
+    base: 100,
+    difficulty_bonus: 60,
+    streak_bonus: 160,
+    milestone: 0,
+    difficulty_multiplier: 1.6,
+    streak_multiplier: 1.5,
+  },
+  progression: {
+    level_label: 'Seeker 5',
+    tier_name: 'Seeker',
+    tier_arabic: 'طالب',
+    tier_meaning: 'One who seeks knowledge',
+    current_level_floor_xp: 2821,
+    next_level_xp: 4291,
+    xp_to_next_level: 1022,
+    progress_percent: 70,
+    classes_to_next_level: 3,
+  },
+  streak: {
+    count: 6,
+    to_full_flame: 2,
+    multiplier: 1.5,
+  },
+  copy: {
+    mode: 'summary',
+    heading: 'Session Complete',
+  },
+};

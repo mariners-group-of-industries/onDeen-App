@@ -1,0 +1,25 @@
+{
+    "HomeScreen": {
+      "Heading": "استكشاف الحدث الأعلى حسب النوع",
+      "InRiyadh": "في الرياض",
+      "SearchPlaceholder": "بحث عن حدث ، فصول ، جولات ومقابلات إلخ.",
+      "PopularEvents": "الأحداث الشعبية",
+      "ThisWeek": "هذا الأسبوع",
+      "IntroducingOndeen": "تقديم أوندين + بلس",
+      "SubscribeUnlock": "اشترك وافتح",
+      "PremiumFeatures": "ميزات مميزة",
+      "ViewPricing": "عرض التسعير",
+      "ExploreByInterest": "استكشاف حسب الاهتمام",
+      "SelectTopic": "اختر موضوع اهتمامك في",
+      "InterestIn": "الاهتمام في",
+      "Duas": "دعاء",
+      "Development": "تنمية",
+      "Career": "مهنة",
+      "Finance": "مالية",
+      "Lifestyle": "نمط حياة",
+      "Teaching": "تعليم",
+      "HealthFitness": "صحة ولياقة",
+      "PersonalDevelopment": "التنمية الشخصية"
+    }
+  }
+  

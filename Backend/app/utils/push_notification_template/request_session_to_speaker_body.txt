@@ -1,0 +1,1 @@
+Your one to one session with {CUSTOMER_NAME} has been updated. Please check your app for details.

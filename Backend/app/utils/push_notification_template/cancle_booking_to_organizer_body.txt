@@ -1,0 +1,5 @@
+{CUSTOMER_NAME} has Cancelled the Booking!
+
+We have received cancle request from {CUSTOMER_NAME}.
+Please plan accordingly.
+We Will keep you updated.

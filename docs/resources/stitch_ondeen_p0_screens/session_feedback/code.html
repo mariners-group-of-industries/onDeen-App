@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Session Feedback</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#6b4cad",
+                        "xp-track": "#EFEBF5",
+                        "inverse-surface": "#322f36",
+                        "primary-fixed": "#eaddff",
+                        "surface-dim": "#ded8e1",
+                        "on-primary": "#ffffff",
+                        "gradient-sunset-start": "#FFC94B",
+                        "outline-variant": "#cbc3d3",
+                        "on-tertiary-container": "#ff8c63",
+                        "on-tertiary-fixed": "#390c00",
+                        "background": "#fef7ff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#4b2a8c",
+                        "surface-variant": "#e7e0e9",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#3e0021",
+                        "surface-container-low": "#f8f1fb",
+                        "secondary-fixed-dim": "#ffb0cd",
+                        "tertiary-container": "#762300",
+                        "surface-container-high": "#ece6ef",
+                        "inverse-primary": "#d2bcff",
+                        "on-secondary-fixed-variant": "#8c0053",
+                        "tertiary-fixed": "#ffdbcf",
+                        "text-muted": "#7A7A7A",
+                        "on-secondary": "#ffffff",
+                        "status-free": "#2ECC71",
+                        "axis-knowledge": "#FFC94B",
+                        "axis-fitness": "#2ECC71",
+                        "on-tertiary-fixed-variant": "#822700",
+                        "secondary-container": "#db1c86",
+                        "bg-app": "#F5F3F9",
+                        "on-surface-variant": "#494551",
+                        "secondary-fixed": "#ffd9e4",
+                        "primary": "#340b75",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#d2bcff",
+                        "gradient-sunset-end": "#E8418F",
+                        "secondary": "#b3006b",
+                        "inverse-on-surface": "#f5eef8",
+                        "on-primary-fixed-variant": "#523294",
+                        "text-primary": "#1A1A1A",
+                        "outline": "#7a7583",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-highest": "#e7e0e9",
+                        "tertiary": "#511500",
+                        "axis-tazkiyyah": "#4B2A8C",
+                        "surface-container": "#f2ecf5",
+                        "on-background": "#1d1a21",
+                        "on-error": "#ffffff",
+                        "axis-ummah": "#E6288E",
+                        "on-primary-container": "#ba9aff",
+                        "surface-card": "#FFFFFF",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1d1a21",
+                        "error": "#ba1a1a",
+                        "gradient-sunset-mid": "#FF7A4A",
+                        "surface": "#fef7ff",
+                        "on-primary-fixed": "#24005b",
+                        "surface-bright": "#fef7ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-margin": "24px",
+                        "internal-lg": "20px",
+                        "internal-sm": "8px",
+                        "screen-edge": "20px",
+                        "internal-md": "16px",
+                        "card-gap": "12px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "display-xp": ["Plus Jakarta Sans"],
+                        "body-main": ["Plus Jakarta Sans"],
+                        "arabic-subtext": ["Plus Jakarta Sans"],
+                        "headline-tier": ["Plus Jakarta Sans"],
+                        "display-xp-mobile": ["Plus Jakarta Sans"],
+                        "body-muted": ["Plus Jakarta Sans"],
+                        "headline-tier-mobile": ["Plus Jakarta Sans"],
+                        "section-label": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "display-xp": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "body-main": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "arabic-subtext": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-tier": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-xp-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-muted": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "headline-tier-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "section-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-bg-app text-text-primary min-h-screen flex flex-col items-center">
+<div class="w-full max-w-md bg-bg-app min-h-screen flex flex-col relative pb-section-margin">
+<!-- TopAppBar -->
+<header class="w-full top-0 left-0 bg-surface dark:bg-on-background flex items-center justify-between px-screen-edge h-16 w-full z-10">
+<button class="text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-2xl">arrow_back</span>
+</button>
+<h1 class="font-headline-tier-mobile text-headline-tier-mobile font-bold text-primary dark:text-primary-fixed">Session Complete</h1>
+<div class="w-6"></div> <!-- Spacer for center alignment -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow px-screen-edge pt-internal-lg flex flex-col gap-section-margin">
+<!-- Anonymous Banner -->
+<div class="flex justify-center">
+<div class="inline-flex items-center gap-2 bg-[#F0EDF8] border border-primary-container text-primary-container px-4 py-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-section-label text-section-label">Anonymous</span>
+</div>
+</div>
+<!-- Header Info -->
+<div class="text-center flex flex-col gap-1">
+<h2 class="font-headline-tier-mobile text-headline-tier-mobile text-text-primary">How was the session?</h2>
+<p class="font-body-muted text-body-muted text-text-muted">Forty Hadith — Thursday Class</p>
+</div>
+<!-- Rating Cards -->
+<div class="flex flex-col gap-card-gap">
+<!-- Card 1 -->
+<div class="bg-surface-card rounded-[16px] p-internal-lg shadow-[0_2px_12px_rgba(0,0,0,0.06)] flex flex-col gap-4 items-center">
+<h3 class="font-body-main text-body-main font-semibold text-center">The session was engaging</h3>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-outline-variant">star</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-card rounded-[16px] p-internal-lg shadow-[0_2px_12px_rgba(0,0,0,0.06)] flex flex-col gap-4 items-center">
+<h3 class="font-body-main text-body-main font-semibold text-center">The delivery of the topic was good</h3>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-axis-knowledge" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[40px] text-outline-variant">star</span>
+</div>
+</div>
+</div>
+<!-- Input Field -->
+<div class="flex flex-col gap-2">
+<label class="font-body-muted text-body-muted text-text-muted px-1" for="suggestions">Any suggestions for improvement?</label>
+<div class="relative">
+<textarea class="w-full bg-bg-app border border-[#E0DBF0] rounded-[12px] p-4 font-body-main text-body-main text-text-primary placeholder:text-text-muted focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors resize-none" id="suggestions" placeholder="Optional..." rows="4"></textarea>
+<div class="absolute bottom-3 right-4 font-body-muted text-body-muted text-text-muted">0 / 500</div>
+</div>
+</div>
+</main>
+<!-- Footer Actions -->
+<div class="px-screen-edge mt-auto pt-section-margin flex flex-col gap-4 items-center pb-8">
+<button class="w-full h-[52px] rounded-full bg-gradient-to-r from-gradient-sunset-start via-gradient-sunset-mid to-gradient-sunset-end text-on-primary font-body-main font-semibold shadow-sm active:scale-95 transition-transform">
+                Submit Feedback
+            </button>
+<button class="font-body-main text-body-main text-text-muted hover:text-primary transition-colors">
+                Skip
+            </button>
+</div>
+</div>
+</body></html>

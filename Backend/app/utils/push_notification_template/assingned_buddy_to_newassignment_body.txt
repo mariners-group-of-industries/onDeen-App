@@ -1,0 +1,1 @@
+You’ve been assigned as a Buddy for {CUSTOMER_NAME} in {EVENT_NAME}. Please reach out to welcome them and offer support 🤝.

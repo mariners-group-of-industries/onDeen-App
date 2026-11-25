@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterHeaderItemCell" id="gTV-IL-0wX" customClass="FilterHeaderItemCell" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="216" height="40"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-Fn-908">
+                        <rect key="frame" x="0.0" y="0.0" width="216" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSY-Oj-9cc" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                <rect key="frame" x="12" y="5" width="192" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GSY-Oj-9cc" secondAttribute="bottom" constant="5" id="CzS-lD-rHj"/>
+                            <constraint firstAttribute="height" constant="40" id="JJO-5s-qA5"/>
+                            <constraint firstItem="GSY-Oj-9cc" firstAttribute="top" secondItem="fQh-Fn-908" secondAttribute="top" constant="5" id="mbI-F7-1wF"/>
+                            <constraint firstItem="GSY-Oj-9cc" firstAttribute="leading" secondItem="fQh-Fn-908" secondAttribute="leading" constant="12" id="oYf-ay-STH"/>
+                            <constraint firstAttribute="trailing" secondItem="GSY-Oj-9cc" secondAttribute="trailing" constant="12" id="wrC-wk-GnT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="fQh-Fn-908" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8lq-C7-c1l"/>
+                <constraint firstAttribute="bottom" secondItem="fQh-Fn-908" secondAttribute="bottom" id="Nor-ze-Nui"/>
+                <constraint firstItem="fQh-Fn-908" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="URo-bh-X1O"/>
+                <constraint firstAttribute="trailing" secondItem="fQh-Fn-908" secondAttribute="trailing" id="y9r-Mp-pAa"/>
+            </constraints>
+            <size key="customSize" width="216" height="50"/>
+            <connections>
+                <outlet property="bgView" destination="fQh-Fn-908" id="1av-lx-GhQ"/>
+                <outlet property="lblTitle" destination="GSY-Oj-9cc" id="AbP-C4-xAb"/>
+            </connections>
+            <point key="canvasLocation" x="105.34351145038167" y="-33.098591549295776"/>
+        </collectionViewCell>
+    </objects>
+</document>

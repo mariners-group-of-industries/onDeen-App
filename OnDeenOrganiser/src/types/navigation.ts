@@ -1,0 +1,32 @@
+export type RootStackParamList = {
+    Home: undefined;
+    Details: undefined;
+    Profile: undefined;
+    Login: undefined;
+    ApplicationStatus: { access_token?: string; application_status?: string; review_note?: string } | undefined;
+    ForgotPasswordScreen: undefined;
+    SignupEmailScreen: { isFromForgotPassword?: boolean } | undefined;
+    VerifyEmailOTP: { email_id: string; isFromForgotPassword?: boolean } | undefined;
+    signinwithMobile: { isFromForgotPassword?: boolean } | undefined;
+    Splash:undefined;
+    Signup:undefined;
+    Otp:{
+      mobile_number?: string;
+      country_code?: string;
+      cca2?: string;
+      isFromForgotPassword?: boolean;
+    } | undefined;
+    CreatePasswordScreen: { resetToken: string } | undefined;
+    CreateAccount: any;
+    CreateEvent: undefined;
+    PreviewEvent: { data?: any } | undefined;
+    CustomeMapView: any;
+    Calendar:undefined;
+    Booking:undefined;
+    Events:undefined;
+    EventDetails:undefined;
+    CourseDetails:undefined;
+    Register:undefined;
+    BookingDetails:undefined;
+    Drafts: undefined;
+  };

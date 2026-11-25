@@ -1,0 +1,174 @@
+ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+
+# Resolve react_native_pods.rb with node to allow for package layout changes.
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, '15.3'
+prepare_react_native_project!
+
+def apply_fmt_consteval_workaround(installer)
+  installer.pods_project.targets.each do |target|
+    next unless target.name == 'fmt'
+
+    target.build_configurations.each do |config|
+      definitions = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] || ['$(inherited)']
+      definitions = [definitions] if definitions.is_a?(String)
+      definitions << 'FMT_USE_CONSTEVAL=0' unless definitions.include?('FMT_USE_CONSTEVAL=0')
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = definitions
+      config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+    end
+  end
+end
+
+def apply_react_remote_profile_workaround(installer)
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      definitions = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] || ['$(inherited)']
+      definitions = [definitions] if definitions.is_a?(String)
+      definitions << 'RCT_REMOTE_PROFILE=0' unless definitions.include?('RCT_REMOTE_PROFILE=0')
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = definitions
+    end
+  end
+end
+
+def expose_react_dev_loading_protocol_header(installer)
+  target = installer.pods_project.targets.find { |pod_target| pod_target.name == 'React-Core.common' }
+  return unless target
+
+  [
+    'RCTDevLoadingViewProtocol.h',
+    'RCTDevLoadingViewSetEnabled.h',
+    'RCTInspectorDevServerHelper.h',
+    'RCTInspectorNetworkHelper.h',
+    'RCTInspectorUtils.h',
+    'RCTInspector.h',
+    'RCTInspectorPackagerConnection.h',
+    'RCTCxxInspectorPackagerConnection.h',
+    'RCTCxxInspectorPackagerConnectionDelegate.h',
+    'RCTCxxInspectorWebSocketAdapter.h',
+    'RCTPackagerClient.h',
+    'RCTPackagerConnection.h',
+    'RCTPausedInDebuggerOverlayController.h',
+  ].each do |header_name|
+    header = installer.pods_project.files.find { |file| file.display_name == header_name }
+    next unless header
+    next if target.headers_build_phase.files_references.include?(header)
+
+    build_file = target.headers_build_phase.add_file_reference(header, true)
+    build_file.settings = { 'ATTRIBUTES' => ['Public'] }
+  end
+end
+
+def add_react_dev_support_header_search_path(installer)
+  target = installer.pods_project.targets.find { |pod_target| pod_target.name == 'React-Core.common' }
+  return unless target
+
+  target.build_configurations.each do |config|
+    paths = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
+    paths = [paths] if paths.is_a?(String)
+    [
+      '"$(PODS_TARGET_SRCROOT)/React/DevSupport"',
+      '"$(PODS_TARGET_SRCROOT)/React/Inspector"',
+    ].each do |react_header_path|
+      paths << react_header_path unless paths.include?(react_header_path)
+    end
+    config.build_settings['HEADER_SEARCH_PATHS'] = paths
+  end
+end
+
+def exclude_react_native_maps_fabric_sources_for_old_arch(installer)
+  return unless ENV['RCT_NEW_ARCH_ENABLED'] == '0'
+
+  fabric_source_names = [
+    'RNMapsMapView.mm',
+    'RNMapsMapViewManager.mm',
+    'RNMapsMarkerView.mm',
+    'RNMapsMarkerViewManager.mm',
+    'RNMapsGoogleMapView.mm',
+    'RNMapsGoogleMapViewManager.mm',
+    'RNMapsGooglePolygonView.mm',
+    'RNMapsGooglePolygonViewManager.mm',
+  ]
+
+  installer.pods_project.targets.each do |target|
+    next unless target.name == 'react-native-maps'
+
+    target.source_build_phase.files.each do |build_file|
+      file_ref = build_file.file_ref
+      next unless file_ref && fabric_source_names.include?(file_ref.display_name)
+
+      build_file.remove_from_project
+    end
+  end
+end
+
+# Enable Frameworks
+use_frameworks! :linkage => :static
+$RNFirebaseAsStaticFramework = true
+
+pre_install do |installer|
+  installer.pod_targets.each do |pod|
+    next unless pod.name == 'RNPermissions' || pod.name.start_with?('Permission-')
+
+    def pod.build_type
+      Pod::BuildType.static_library
+    end
+  end
+end
+
+# React Native Maps
+rn_maps_path = '../node_modules/react-native-maps'
+pod 'react-native-maps/Google', :path => rn_maps_path
+
+# React Native Permissions - New style (v3+)
+permissions_path = '../node_modules/react-native-permissions/ios'
+pod 'Permission-Camera', :path => "#{permissions_path}/Camera.podspec"
+pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary.podspec"
+pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
+pod 'Permission-MediaLibrary', :path => "#{permissions_path}/MediaLibrary.podspec"
+
+target 'OnDeen' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
+    :hermes_enabled => true
+  )
+
+  # React Native Firebase
+  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
+  pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
+
+  # Other dependencies
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  pod 'react-native-geolocation', :path => '../node_modules/@react-native-community/geolocation'
+
+  target 'OnDeenTests' do
+    inherit! :complete
+  end
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false
+    )
+    apply_fmt_consteval_workaround(installer)
+    apply_react_remote_profile_workaround(installer)
+    expose_react_dev_loading_protocol_header(installer)
+    add_react_dev_support_header_search_path(installer)
+    exclude_react_native_maps_fabric_sources_for_old_arch(installer)
+    
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'i386'
+        config.build_settings['CLANG_ENABLE_MODULES'] = 'YES'
+      end
+    end
+  end
+end

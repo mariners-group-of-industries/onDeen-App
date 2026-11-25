@@ -1,0 +1,2 @@
+📝 {CUSTOMER_NAME} has signed up for {EVENT_NAME} and requested a Buddy. Please assign a volunteer to welcome them and offer support.
+

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1015708537755",
+    "project_id": "ondeen-c15f4",
+    "storage_bucket": "ondeen-c15f4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015708537755:android:2b84e3bd736e9ddbf0473e",
+        "android_client_info": {
+          "package_name": "com.ondeen.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442569324514-pg50q3vnhqqoljuvbkr6v1c042gt4h99.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ondeen.user",
+            "certificate_hash": "088B25D04AEC8455DC084145E3EA9C2D9CE08B3E"
+          }
+        },
+        {
+          "client_id": "1015708537755-64c6ol0ir2gmdoauou48c5hfjlt5thm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQz4NtTXOsXCGGDC68AX7sdbiGHLfGEq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015708537755-64c6ol0ir2gmdoauou48c5hfjlt5thm9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1015708537755-3p4nhka12rr6mdo4tj0gp8q43c6igmr1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.ondeenorganizer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

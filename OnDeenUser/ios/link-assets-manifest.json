@@ -1,0 +1,81 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Altromagnetic-Bold.otf",
+      "sha1": "57e602c7f8bc66eb6eb62e7b1f0ad6bcf5155a31"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Book.otf",
+      "sha1": "0bc9eb916b244c6bf8ff329e948c897bbaf8b09f"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Deml.otf",
+      "sha1": "c973e2074926bc637b02510f5e9334c541f715d5"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Fig.otf",
+      "sha1": "0ce644a5909ce4e329e050954daa1101f6326d89"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Medium.otf",
+      "sha1": "b6649b14280c076b8d742acd949beda7710b0213"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Semi.otf",
+      "sha1": "db303c97e3bd285253813288948f5a04db38017a"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Test.otf",
+      "sha1": "34cf80ea18dddb43ed6d54004072d7c6c3d360fb"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Thick.otf",
+      "sha1": "bfed38e0afcd3f546a1cc2c9bb5899772922f267"
+    },
+    {
+      "path": "assets/fonts/Altromagnetic-Vfig.otf",
+      "sha1": "f2e952c1375764c3a215a4682268f7f0a83b37f2"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Black.otf",
+      "sha1": "e02629f3e5f5c2b8a1b020065a980b09f703ab32"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Bold.otf",
+      "sha1": "cdd39cc963a7fb3093abd2cfaa4340a42bd4ebf1"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Heavy.otf",
+      "sha1": "1fcebff6d74754c73a3333344aab894fd953b6c2"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Light.otf",
+      "sha1": "331a91d16f0ea16e0a3f563b983f6ae45a57633f"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Medium.otf",
+      "sha1": "cb9b87e13f1dae7302b892436538873085eb2d66"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Regular.otf",
+      "sha1": "5fb4e36094c38db08a95bde5e075dc0efaf50039"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Semibold.otf",
+      "sha1": "08cb9855da8038f399c5342838d48c3cb9ba7b32"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Thin.otf",
+      "sha1": "73555e8dc472dabbcd6a7123bfb8fe5574d0383a"
+    },
+    {
+      "path": "assets/fonts/SF-Pro-Rounded-Ultralight.otf",
+      "sha1": "8af9d1c96de15451d67c0c5f7736f3c9286931ab"
+    },
+    {
+      "path": "assets/fonts/fonts.tsx",
+      "sha1": "31aa3c1c81b2d83d17504c74b765cd25e5d1c123"
+    }
+  ]
+}

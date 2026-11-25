@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventCourseCell" rowHeight="97" id="KGk-i7-Jjw" customClass="EventCourseCell" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="f32-xy-D4U">
+                        <rect key="frame" x="48" y="0.0" width="272" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Class 01" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysZ-gO-fJm" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="272" height="26.666666666666668"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" name="545454"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="QIy-VD-6Zc">
+                                <rect key="frame" x="0.0" y="38.666666666666657" width="272" height="35.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Criteria for enrolling" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5y-pT-Cng" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="0E0D0E"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nullam lacinia facilisis mi a convallis." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI5-PS-t1F" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="21" width="272" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" name="3A3A3A"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read More..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSY-N0-o6l" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35.333333333333336" width="272" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <color key="textColor" name="DB3171"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESF-yw-fZw">
+                        <rect key="frame" x="0.0" y="90" width="320" height="1"/>
+                        <color key="backgroundColor" name="F2DFE6"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Q2d-u3-iE5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_education" translatesAutoresizingMaskIntoConstraints="NO" id="9wR-Sb-uHA">
+                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9wR-Sb-uHA" secondAttribute="height" id="ONN-Oc-Rgl"/>
+                            <constraint firstAttribute="width" constant="32" id="p6a-FP-TkL"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ESF-yw-fZw" firstAttribute="leading" secondItem="9wR-Sb-uHA" secondAttribute="leading" id="3Yc-sJ-RqW"/>
+                    <constraint firstAttribute="trailing" secondItem="f32-xy-D4U" secondAttribute="trailing" id="4me-9H-Pcm"/>
+                    <constraint firstItem="f32-xy-D4U" firstAttribute="leading" secondItem="9wR-Sb-uHA" secondAttribute="trailing" constant="16" id="MUd-CF-hUn"/>
+                    <constraint firstItem="ESF-yw-fZw" firstAttribute="trailing" secondItem="f32-xy-D4U" secondAttribute="trailing" id="MYy-kh-txJ"/>
+                    <constraint firstItem="9wR-Sb-uHA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="PLg-ML-pxj"/>
+                    <constraint firstItem="9wR-Sb-uHA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PT7-mt-8KT"/>
+                    <constraint firstItem="f32-xy-D4U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PxB-NT-1bD"/>
+                    <constraint firstAttribute="bottom" secondItem="ESF-yw-fZw" secondAttribute="bottom" constant="6" id="fuC-ka-tt2"/>
+                    <constraint firstItem="ESF-yw-fZw" firstAttribute="top" secondItem="f32-xy-D4U" secondAttribute="bottom" constant="16" id="s9v-b6-O9b"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="imgView" destination="9wR-Sb-uHA" id="EIL-na-sHo"/>
+                <outlet property="lblHeaderTitle" destination="ysZ-gO-fJm" id="Pfw-sH-NAu"/>
+                <outlet property="lblTitle" destination="p5y-pT-Cng" id="d8a-df-MNc"/>
+                <outlet property="lblTitle2" destination="tI5-PS-t1F" id="Kub-J8-ahd"/>
+            </connections>
+            <point key="canvasLocation" x="-64.122137404580144" y="17.253521126760564"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_education" width="32" height="32"/>
+        <namedColor name="0E0D0E">
+            <color red="0.054901960784313725" green="0.050980392156862744" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="3A3A3A">
+            <color red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="545454">
+            <color red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DB3171">
+            <color red="0.85900002717971802" green="0.19200000166893005" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F2DFE6">
+            <color red="0.94901960784313721" green="0.87450980392156863" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

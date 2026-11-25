@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Celebration</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#ba9aff",
+                        "tertiary": "#511500",
+                        "on-background": "#1d1a21",
+                        "surface-bright": "#fef7ff",
+                        "inverse-on-surface": "#f5eef8",
+                        "surface-container-highest": "#e7e0e9",
+                        "surface-container": "#f2ecf5",
+                        "on-tertiary-fixed": "#390c00",
+                        "primary-fixed": "#eaddff",
+                        "on-surface": "#1d1a21",
+                        "text-muted": "#7A7A7A",
+                        "inverse-surface": "#322f36",
+                        "axis-knowledge": "#FFC94B",
+                        "outline-variant": "#cbc3d3",
+                        "on-tertiary-fixed-variant": "#822700",
+                        "on-tertiary": "#ffffff",
+                        "background": "#fef7ff",
+                        "on-secondary-fixed": "#3e0021",
+                        "error": "#ba1a1a",
+                        "bg-app": "#F5F3F9",
+                        "inverse-primary": "#d2bcff",
+                        "gradient-sunset-mid": "#FF7A4A",
+                        "gradient-sunset-end": "#E8418F",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-container-low": "#f8f1fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#523294",
+                        "on-primary-fixed": "#24005b",
+                        "on-primary": "#ffffff",
+                        "xp-track": "#EFEBF5",
+                        "surface-variant": "#e7e0e9",
+                        "secondary-container": "#db1c86",
+                        "text-primary": "#1A1A1A",
+                        "surface-dim": "#ded8e1",
+                        "secondary-fixed-dim": "#ffb0cd",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#8c0053",
+                        "axis-tazkiyyah": "#4B2A8C",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ffd9e4",
+                        "axis-ummah": "#E6288E",
+                        "status-free": "#2ECC71",
+                        "secondary": "#b3006b",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "on-secondary-container": "#fffbff",
+                        "primary": "#340b75",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ff8c63",
+                        "on-surface-variant": "#494551",
+                        "on-error-container": "#93000a",
+                        "surface": "#fef7ff",
+                        "gradient-sunset-start": "#FFC94B",
+                        "axis-fitness": "#2ECC71",
+                        "surface-container-high": "#ece6ef",
+                        "tertiary-container": "#762300",
+                        "primary-fixed-dim": "#d2bcff",
+                        "primary-container": "#4b2a8c",
+                        "surface-tint": "#6b4cad",
+                        "surface-card": "#FFFFFF",
+                        "outline": "#7a7583"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "card": "20px"
+                    },
+                    "spacing": {
+                        "section-margin": "24px",
+                        "internal-md": "16px",
+                        "internal-lg": "20px",
+                        "card-gap": "12px",
+                        "base": "8px",
+                        "internal-sm": "8px",
+                        "screen-edge": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-tier": ["Plus Jakarta Sans"],
+                        "arabic-subtext": ["Plus Jakarta Sans"],
+                        "display-xp": ["Plus Jakarta Sans"],
+                        "body-muted": ["Plus Jakarta Sans"],
+                        "body-main": ["Plus Jakarta Sans"],
+                        "section-label": ["Plus Jakarta Sans"],
+                        "headline-tier-mobile": ["Plus Jakarta Sans"],
+                        "display-xp-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-tier": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "arabic-subtext": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-xp": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "body-muted": ["13px", { "lineHeight": "18px", "fontWeight": "400" }],
+                        "body-main": ["15px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "section-label": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }],
+                        "headline-tier-mobile": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+                        "display-xp-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gradient-sunset {
+            background: linear-gradient(135deg, #FFC94B 0%, #FF7A4A 50%, #E8418F 100%);
+        }
+        .text-gradient-sunset {
+            background: linear-gradient(135deg, #FFC94B 0%, #FF7A4A 50%, #E8418F 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .radial-bloom {
+            background: radial-gradient(circle at center, rgba(255, 122, 74, 0.2) 0%, rgba(245, 243, 249, 0) 70%);
+        }
+        .glow-subtle {
+            box-shadow: 0 0 30px rgba(255, 122, 74, 0.3);
+        }
+        
+        /* New Animations */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 30px rgba(255, 122, 74, 0.3); }
+            50% { box-shadow: 0 0 50px rgba(255, 122, 74, 0.6); }
+        }
+        .glow-subtle-pulse {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes slide-up-fade {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0; /* Starts hidden until animation triggers */
+            animation-delay: 0.3s;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            15% { opacity: 0.5; }
+            85% { opacity: 0.5; }
+            100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+        }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 122, 74, 0.5) 0%, rgba(255, 122, 74, 0) 70%);
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-bg-app text-on-surface antialiased min-h-screen flex flex-col relative overflow-hidden max-w-[430px] mx-auto shadow-2xl">
+<!-- Background Bloom -->
+<div class="absolute inset-0 radial-bloom pointer-events-none z-0"></div>
+<!-- Particles -->
+<div class="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="particle w-8 h-8 left-[15%]" style="animation: float-up 8s infinite linear 0s;"></div>
+<div class="particle w-12 h-12 left-[35%]" style="animation: float-up 12s infinite linear 2s;"></div>
+<div class="particle w-6 h-6 left-[65%]" style="animation: float-up 7s infinite linear 4s;"></div>
+<div class="particle w-10 h-10 left-[85%]" style="animation: float-up 10s infinite linear 1s;"></div>
+<div class="particle w-16 h-16 left-[50%]" style="animation: float-up 14s infinite linear 3s;"></div>
+</div>
+<!-- Top AppBar (from JSON) -->
+<header class="bg-transparent docked full-width top-0 z-10 flex justify-between items-center w-full px-screen-edge py-internal-md">
+<button class="hover:bg-surface-container-high/50 dark:hover:bg-surface-container/20 rounded-full transition-colors active:scale-95 duration-150 ease-in-out p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 0;">close</span>
+</button>
+<h1 class="text-headline-tier-mobile font-headline-tier-mobile text-primary dark:text-primary-fixed-dim invisible">Celebration</h1>
+<div class="w-10"></div> <!-- Spacer for alignment -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col items-center justify-center px-screen-edge z-10 relative w-full pt-8 pb-32">
+<!-- Previous Tier Pill -->
+<div class="bg-[#F0EDF8] border border-[#E0DBF0] rounded-full px-4 py-2 flex items-center space-x-2 mb-12">
+<span class="material-symbols-outlined text-text-muted text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-muted text-text-muted">You've completed Seeker</span>
+</div>
+<!-- Badge -->
+<div class="relative w-[120px] h-[120px] rounded-full bg-white flex items-center justify-center mb-6 glow-subtle-pulse z-20">
+<!-- Gradient Ring -->
+<div class="absolute inset-0 rounded-full p-[3px] gradient-sunset" style="-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude;"></div>
+<!-- Icon -->
+<span class="material-symbols-outlined text-[48px] text-gradient-sunset" style="font-variation-settings: 'FILL' 0;">explore</span>
+</div>
+<!-- Arabic Text -->
+<div class="text-[32px] font-arabic-subtext text-axis-tazkiyyah mb-1 leading-none" dir="rtl">راحل</div>
+<!-- Tier Name -->
+<h2 class="text-[40px] font-bold text-text-primary mb-3 leading-none">Voyager</h2>
+<!-- Level Pill -->
+<div class="bg-[#F0EDF8] border border-axis-tazkiyyah rounded-full px-3 py-1 mb-6">
+<span class="text-[13px] font-semibold text-axis-tazkiyyah">Level 11</span>
+</div>
+<!-- Body Text -->
+<p class="font-body-main text-text-muted text-center max-w-[280px] leading-[1.6] mb-10">
+            You're on a journey now. Every class, every session — it's all been building to this.
+        </p>
+<!-- Stats Row -->
+<div class="flex space-x-card-gap w-full justify-center mb-8 animate-slide-up">
+<div class="bg-surface-card rounded-card shadow-[0_2px_12px_rgba(0,0,0,0.06)] px-[14px] py-[8px] flex flex-col items-center justify-center flex-1">
+<span class="text-[11px] text-text-muted mb-1 whitespace-nowrap">📚 Classes attended</span>
+<span class="text-[15px] font-bold text-text-primary">47</span>
+</div>
+<div class="bg-surface-card rounded-card shadow-[0_2px_12px_rgba(0,0,0,0.06)] px-[14px] py-[8px] flex flex-col items-center justify-center flex-1">
+<span class="text-[11px] text-text-muted mb-1 whitespace-nowrap">⏱ Hours learned</span>
+<span class="text-[15px] font-bold text-text-primary">94h</span>
+</div>
+<div class="bg-surface-card rounded-card shadow-[0_2px_12px_rgba(0,0,0,0.06)] px-[14px] py-[8px] flex flex-col items-center justify-center flex-1">
+<span class="text-[11px] text-text-muted mb-1 whitespace-nowrap">🔥 Best streak</span>
+<span class="text-[15px] font-bold text-text-primary">12</span>
+</div>
+</div>
+<!-- Info Link -->
+<a class="text-[13px] text-text-muted underline decoration-text-muted/50 underline-offset-2 hover:text-text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 0;">info</span>
+            What does Voyager mean?
+        </a>
+</main>
+<!-- Bottom Action -->
+<div class="absolute bottom-0 w-full px-screen-edge pb-10 bg-gradient-to-t from-bg-app via-bg-app to-transparent pt-10 flex flex-col items-center">
+<button class="w-full h-[52px] rounded-full gradient-sunset text-white font-semibold text-[16px] shadow-lg shadow-gradient-sunset-mid/20 hover:opacity-90 transition-opacity mb-3">
+            Continue
+        </button>
+<span class="text-[12px] text-text-muted">Voyager 1 of 10</span>
+</div>
+</body></html>

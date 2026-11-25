@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+instance/
+app/static/uploads/
+app/utils/temp/
+app/utils/fcmfiles/
+ondeen-local.db
+nohup.out

@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "514484085379",
+    "project_id": "ondeenorg",
+    "storage_bucket": "ondeenorg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514484085379:android:c593f6a4134066bb0a71b6",
+        "android_client_info": {
+          "package_name": "com.ondeenorganiser"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442569324514-1f0u8881fr4d8489pipul6lh9jbk5pum.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ondeenorganiser",
+            "certificate_hash": "5E8F16062EA3CD2C4A0D547876BAA6F38CABF625"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVPCP1i2pHHPGlchwjoj3eD3wgLtjUeeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

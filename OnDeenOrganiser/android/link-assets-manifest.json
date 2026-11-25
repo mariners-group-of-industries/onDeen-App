@@ -1,0 +1,113 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-bold.otf",
+      "sha1": "57e602c7f8bc66eb6eb62e7b1f0ad6bcf5155a31"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-boldoblique.otf",
+      "sha1": "b1ded8dfdae8c296eb656839caeacc7fa67d7813"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-book.otf",
+      "sha1": "0bc9eb916b244c6bf8ff329e948c897bbaf8b09f"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-bookoblique.otf",
+      "sha1": "b58e74d8b010be0aa57aafc5c9be4d0433c6801e"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-demi.otf",
+      "sha1": "c973e2074926bc637b02510f5e9334c541f715d5"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-demioblique.otf",
+      "sha1": "5fc56088aa1a282372667afa23319c5dcdf01f8b"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-lig.otf",
+      "sha1": "0ce644a5909ce4e329e050954daa1101f6326d89"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-ligoblique.otf",
+      "sha1": "7862817f4e11dca752fbb6ef4fe82337aa43369d"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-medium.otf",
+      "sha1": "b6649b14280c076b8d742acd949beda7710b0213"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-mediumoblique.otf",
+      "sha1": "5ed4fa2e6bcfc7801871cdebc40e60a14dfe6170"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-semi.otf",
+      "sha1": "db303c97e3bd285253813288948f5a04db38017a"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-semioblique.otf",
+      "sha1": "ef42f150c1b6a1b0d737f8af663ccb7f00fd0bce"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-text.otf",
+      "sha1": "34cf80ea18dddb43ed6d54004072d7c6c3d360fb"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-textoblique.otf",
+      "sha1": "33ce12ff0be877838adff167e0b7110b869bb137"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-thick.otf",
+      "sha1": "bfed38e0afcd3f546a1cc2c9bb5899772922f267"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-thickoblique.otf",
+      "sha1": "3196924499a03c9d7c03d7c814a22748a7949be9"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-xlig.otf",
+      "sha1": "f2e952c1375764c3a215a4682268f7f0a83b37f2"
+    },
+    {
+      "path": "src/assets/fonts/Fontspring-DEMO-allroundgothic-xligoblique.otf",
+      "sha1": "5a698fc5710eba8de677a5c955503af9ffb2d229"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Black.otf",
+      "sha1": "e02629f3e5f5c2b8a1b020065a980b09f703ab32"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Bold.otf",
+      "sha1": "cdd39cc963a7fb3093abd2cfaa4340a42bd4ebf1"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Heavy.otf",
+      "sha1": "1fcebff6d74754c73a3333344aab894fd953b6c2"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Light.otf",
+      "sha1": "331a91d16f0ea16e0a3f563b983f6ae45a57633f"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Medium.otf",
+      "sha1": "cb9b87e13f1dae7302b892436538873085eb2d66"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Regular.otf",
+      "sha1": "5fb4e36094c38db08a95bde5e075dc0efaf50039"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Semibold.otf",
+      "sha1": "08cb9855da8038f399c5342838d48c3cb9ba7b32"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Thin.otf",
+      "sha1": "73555e8dc472dabbcd6a7123bfb8fe5574d0383a"
+    },
+    {
+      "path": "src/assets/fonts/SF-Pro-Rounded-Ultralight.otf",
+      "sha1": "8af9d1c96de15451d67c0c5f7736f3c9286931ab"
+    }
+  ]
+}

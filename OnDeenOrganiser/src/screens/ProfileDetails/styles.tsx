@@ -1,0 +1,308 @@
+import {Dimensions, StyleSheet} from 'react-native';
+import {fontScale, heightScale, widthScale} from '../../helpers/scale';
+import {fontFamilies, fontSizes} from '../../assets/themes/fonts';
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFF',
+  },
+  carouselSecondaryItem: {
+    overflow: 'hidden',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  carouselImage: {
+    width: '100%',
+    height: heightScale(298),
+  },
+  carouselSecondaryImage: {
+    width: '100%',
+    height: heightScale(170),
+    borderRadius: 24,
+    overflow: 'hidden',
+  },
+  imageBorderRadius: {
+    borderRadius: 24,
+  },
+  touchableLabelSecondaryContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    marginTop: heightScale(16),
+    paddingRight: widthScale(8),
+  },
+  heartIconSecondary: {
+    width: widthScale(36),
+    height: heightScale(36),
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 32,
+    bottom: heightScale(6),
+    backgroundColor: '#00000066',
+  },
+  carouselsubSecondaryContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: heightScale(8),
+  },
+  carouselTitle: {
+    fontSize: fontScale(14),
+    fontWeight: '600',
+    color: '#17101F',
+  },
+  dateIconContainer: {
+    flexDirection: 'row',
+    gap: 4,
+    alignItems: 'center',
+  },
+  carouselDate: {
+    fontSize: fontScale(12),
+    color: '#161616',
+    fontWeight: '500',
+  },
+  dateIconSecondContainer: {
+    flexDirection: 'row',
+    gap: 4,
+    alignItems: 'center',
+    // justifyContent: 'space-between',
+  },
+  customLableSecondaryCarousel: {
+    color: '#17101F',
+    fontWeight: '700',
+    fontSize: fontScale(10),
+    bottom: heightScale(2),
+  },
+  customLableCarouselSecondaryContainer: {
+    backgroundColor: '#C8F9AA',
+    borderRadius: 4,
+    paddingVertical: heightScale(4),
+    paddingHorizontal: widthScale(12),
+    height: heightScale(20),
+    left: 10,
+  },
+  containerImageEdit: {
+    height: heightScale(24),
+    width: widthScale(24),
+  },
+  headerTitle: {
+    color: '#000000',
+    fontSize: fontScale(24),
+    fontWeight: '600',
+    // fontFamily: fontFamilies.SFProRoundedBlackLight,
+    paddingLeft: widthScale(6),
+  },
+  nearbyText: {
+    marginTop: heightScale(20),
+    fontWeight: '600',
+    fontSize: fontScale(20),
+    color: '#0E0D0E',
+    marginLeft: widthScale(23),
+  },
+  profilePicContainer: {
+    paddingTop: heightScale(20),
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFE5EF',
+    paddingBottom: heightScale(38),
+    borderBottomLeftRadius: 32,
+    borderBottomRightRadius: 32,
+  },
+  profileImage: {
+    height: heightScale(90),
+    width: widthScale(90),
+    borderRadius: 90,
+    paddingVertical: heightScale(4),
+    paddingHorizontal: widthScale(12),
+    resizeMode: 'contain',
+    borderWidth:1,
+    borderColor:'#8888'
+  },
+  speakerName: {
+    fontSize: fontScale(16),
+    fontWeight: '500',
+    color: '#3A3A3A',
+    fontFamily: fontFamilies.SFProRoundedBlackMedium,
+  },
+  addressContainer: {flexDirection: 'row', alignItems: 'center', gap: 4},
+  speakerTitle: {
+    fontSize: fontScale(14),
+    fontWeight: '400',
+    color: '#3A3A3A',
+    fontFamily: fontFamilies.SFProRoundedBlackRegular,
+  },
+  levelContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingVertical: heightScale(32),
+  },
+  levelSubContainer: {
+    backgroundColor: '#EBE2FF',
+    borderRadius: 16,
+    gap: heightScale(10),
+    padding: 16,
+    width: widthScale(120),
+  },
+  journeyLevelContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  journeyLevelHeading: {
+    color: '#3E146F',
+    fontWeight: '300',
+    fontSize: fontScale(12),
+    fontFamily: fontFamilies.SFProRoundedBlackLight,
+  },
+  journeyLevelLabel: {
+    color: '#3E146F',
+    fontSize: fontScale(16),
+    fontWeight: '500',
+    fontFamily: fontFamilies.SFProRoundedBlackMedium,
+  },
+  badgesContainer: {
+    marginTop: heightScale(32),
+    paddingLeft: widthScale(24),
+  },
+  badgeAwardsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingRight: widthScale(24),
+  },
+  badgeEventsHeading: {
+    fontSize: fontScale(14),
+    fontWeight: '600',
+    color: '#0E0D0E',
+  },
+  allLabel: {
+    fontSize: fontScale(14),
+    fontWeight: '600',
+    color: '#DB3171',
+  },
+  awardItem: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10,
+    backgroundColor: '#FCE5FF',
+    borderRadius: 16,
+    minWidth: widthScale(92),
+  },
+  awardImage: {
+    width: widthScale(36),
+    height: heightScale(36),
+    resizeMode: 'contain',
+  },
+  textContainer: {
+    flexDirection: 'column',
+  },
+  awardName: {
+    fontSize: fontScale(10),
+    fontWeight: '600',
+    color: '#3E146F',
+  },
+  awardArchived: {
+    fontSize: fontScale(10),
+    fontWeight: '400',
+    color: '#3E146F',
+  },
+  awardsListContainer: {
+    gap: 8,
+    marginTop: heightScale(12),
+    paddingRight: 12,
+  },
+  progressBar: {
+    height: 3,
+    width: 54,
+    borderRadius: 20,
+    backgroundColor: '#F8D7FD',
+  },
+  reviewsLabel: {
+    paddingTop: heightScale(24),
+    fontSize: fontScale(14),
+    fontWeight: '600',
+    color: '#0E0D0E',
+    paddingLeft: widthScale(21),
+    fontFamily: fontFamilies.allroundgothicSemiBold,
+  },
+  ratingContainer: {
+    marginTop: heightScale(12),
+    marginHorizontal: widthScale(21),
+    paddingVertical: heightScale(12),
+    backgroundColor: '#F7EEFF',
+    borderRadius: 12,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    paddingHorizontal: 16,
+  },
+  organizationName: {
+    fontSize: fontScale(14),
+    fontWeight: '600',
+    color: '#17101F',
+  },
+  viewallLabel: {
+    fontSize: fontScale(10),
+    color: '#000000',
+    fontWeight: '700',
+  },
+  viewallContainer: {
+    minWidth: widthScale(93),
+    maxHeight: heightScale(30),
+    paddingHorizontal: widthScale(16),
+    paddingVertical: heightScale(8),
+    backgroundColor: '#F7EEFF',
+  },
+
+  gradientBorder: {
+    borderRadius: widthScale(90),
+    padding: widthScale(1.3),
+    // flex: 1,
+  },
+  reviewsContainer: {
+    paddingVertical: heightScale(16),
+    paddingHorizontal: widthScale(21),
+    flexDirection: 'row',
+    gap: widthScale(12),
+  },
+  separatorLine: {
+    width: Dimensions.get('window').width * 0.89,
+    backgroundColor: '#E6E6E6',
+    height: heightScale(1),
+    justifyContent: 'center',
+  },
+  separatorContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  ratingHeading: {
+    color: '#17101F',
+    fontSize: fontScale(14),
+    fontWeight: '500',
+    fontFamily: fontFamilies.SFProRoundedBlackMedium,
+
+  },
+  ratingPerson: {
+    color: '#17101F',
+    fontSize: fontScale(12),
+    fontWeight: '400',
+  },
+  ratingContent: {
+    color: '#3A3A3A',
+    fontSize: fontScale(12),
+    paddingRight: 80,
+    fontFamily: fontFamilies.SFProRoundedBlackRegular,
+  },
+  profile: {
+    paddingVertical: heightScale(14),
+    paddingHorizontal: widthScale(24),
+    backgroundColor: '#E1E1E1',
+    width: widthScale(82),
+    height: widthScale(82),
+    borderRadius: widthScale(50),
+    borderColor: '#E1E1E1',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+},
+});
+
+export default styles;

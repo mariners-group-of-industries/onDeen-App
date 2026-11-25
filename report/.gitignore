@@ -1,0 +1,5 @@
+deployments/
+.netlify-site-id
+.netlify-token
+downloads/*.apk
+downloads/*.txt

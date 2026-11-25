@@ -1,0 +1,30 @@
+{
+    "HomeScreen": {
+      "HeadingSearch": "Explore Your Searched events",
+      "InRiyadh": "In Riyadh",
+      "PopularEvents": "POPULAR EVENTS",
+      "ThisWeek": "THIS WEEK",
+      "IntroducingOndeen": "Introducing Ondeen +plus",
+      "SubscribeUnlock": "SUBSCRIBE, UNLOCK",
+      "PremiumFeatures": "PREMIUM FEATURES",
+      "ViewPricing": "VIEW PRICING",
+      "ExploreByInterest": "Explore by interest",
+      "SelectTopic": "Select topic of your",
+      "InterestIn": "interest in",
+      "Duas": "Duas",
+      "Development": "Development",
+      "Career": "Career",
+      "Finance": "FINANCE",
+      "Lifestyle": "LIFESTYLE",
+      "Teaching": "TEACHING",
+      "HealthFitness": "Health & fitness",
+      "PersonalDevelopment": "Personal development",
+      "VIEWALL": "VIEW ALL",
+      "SerachBatText": "Search event, classes, Tour & meetups etc.",
+      "Free": "Free"
+    },
+    "BookingDetails":{
+      "BookingDetailsHeading": "Booking details"
+    }
+  }
+  

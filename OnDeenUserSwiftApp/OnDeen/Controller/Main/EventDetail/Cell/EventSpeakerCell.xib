@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventSpeakerCell" id="gTV-IL-0wX" customClass="EventSpeakerCell" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="236" height="55"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp3-q0-81V">
+                        <rect key="frame" x="0.0" y="0.0" width="236" height="55"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_girl_bg_test" translatesAutoresizingMaskIntoConstraints="NO" id="V8w-Mf-aIF">
+                                <rect key="frame" x="4" y="4" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V8w-Mf-aIF" secondAttribute="height" id="5xo-kW-9xa"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Morph" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Rg-Py-owP" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                <rect key="frame" x="59" y="8" width="169" height="39"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="5Rg-Py-owP" secondAttribute="bottom" constant="8" id="1I2-9p-KEh"/>
+                            <constraint firstItem="V8w-Mf-aIF" firstAttribute="top" secondItem="gp3-q0-81V" secondAttribute="top" constant="4" id="3NW-DA-EKd"/>
+                            <constraint firstItem="5Rg-Py-owP" firstAttribute="top" secondItem="gp3-q0-81V" secondAttribute="top" constant="8" id="3Wh-hs-M1a"/>
+                            <constraint firstAttribute="bottom" secondItem="V8w-Mf-aIF" secondAttribute="bottom" constant="4" id="Bg8-hh-X6i"/>
+                            <constraint firstAttribute="trailing" secondItem="5Rg-Py-owP" secondAttribute="trailing" constant="8" id="TPq-wT-xn6"/>
+                            <constraint firstItem="V8w-Mf-aIF" firstAttribute="centerY" secondItem="gp3-q0-81V" secondAttribute="centerY" id="rjE-8g-lun"/>
+                            <constraint firstItem="5Rg-Py-owP" firstAttribute="leading" secondItem="V8w-Mf-aIF" secondAttribute="trailing" constant="8" id="rpd-eo-G77"/>
+                            <constraint firstItem="V8w-Mf-aIF" firstAttribute="leading" secondItem="gp3-q0-81V" secondAttribute="leading" constant="4" id="uYc-Ut-myE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gp3-q0-81V" secondAttribute="trailing" id="0Nf-ZT-fbl"/>
+                <constraint firstItem="gp3-q0-81V" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2UO-QK-Ja7"/>
+                <constraint firstItem="gp3-q0-81V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Bi9-hH-3cU"/>
+                <constraint firstAttribute="bottom" secondItem="gp3-q0-81V" secondAttribute="bottom" id="WHa-3R-Oir"/>
+            </constraints>
+            <size key="customSize" width="236" height="55"/>
+            <connections>
+                <outlet property="bgView" destination="gp3-q0-81V" id="0TO-57-Egq"/>
+                <outlet property="imgView" destination="V8w-Mf-aIF" id="zyo-bJ-stM"/>
+                <outlet property="lblTitle" destination="5Rg-Py-owP" id="zOj-du-jgf"/>
+            </connections>
+            <point key="canvasLocation" x="74.809160305343511" y="-31.338028169014088"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_girl_bg_test" width="393" height="539"/>
+    </resources>
+</document>

@@ -1,0 +1,8 @@
+{
+  "name": "ondeen-owner-review",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Railway-hosted OnDeen owner review packet",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}

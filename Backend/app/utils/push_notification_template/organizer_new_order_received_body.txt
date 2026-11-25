@@ -1,0 +1,1 @@
+{CUSTOMER_NAME} has made a booking. Please check your dashboard for details.

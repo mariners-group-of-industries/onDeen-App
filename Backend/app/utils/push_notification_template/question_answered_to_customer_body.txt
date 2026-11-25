@@ -1,0 +1,5 @@
+Dear {CUSTOMER_NAME},
+
+Your question has been answered by {SPEAKER_NAME}.
+
+Thank you for choosing Ondeen. We hope to serve you again in the future.

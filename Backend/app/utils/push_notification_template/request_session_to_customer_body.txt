@@ -1,0 +1,5 @@
+Dear {CUSTOMER_NAME},
+
+Your one to one session with speaker {SPEAKER_NAME} has an update.
+
+Thank you for choosing Ondeen. We hope to serve you again in the future.

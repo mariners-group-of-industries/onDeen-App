@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Session Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#6b4cad",
+                        "xp-track": "#EFEBF5",
+                        "inverse-surface": "#322f36",
+                        "primary-fixed": "#eaddff",
+                        "surface-dim": "#ded8e1",
+                        "on-primary": "#ffffff",
+                        "gradient-sunset-start": "#FFC94B",
+                        "outline-variant": "#cbc3d3",
+                        "on-tertiary-container": "#ff8c63",
+                        "on-tertiary-fixed": "#390c00",
+                        "background": "#fef7ff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#4b2a8c",
+                        "surface-variant": "#e7e0e9",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#3e0021",
+                        "surface-container-low": "#f8f1fb",
+                        "secondary-fixed-dim": "#ffb0cd",
+                        "tertiary-container": "#762300",
+                        "surface-container-high": "#ece6ef",
+                        "inverse-primary": "#d2bcff",
+                        "on-secondary-fixed-variant": "#8c0053",
+                        "tertiary-fixed": "#ffdbcf",
+                        "text-muted": "#7A7A7A",
+                        "on-secondary": "#ffffff",
+                        "status-free": "#2ECC71",
+                        "axis-knowledge": "#FFC94B",
+                        "axis-fitness": "#2ECC71",
+                        "on-tertiary-fixed-variant": "#822700",
+                        "secondary-container": "#db1c86",
+                        "bg-app": "#F5F3F9",
+                        "on-surface-variant": "#494551",
+                        "secondary-fixed": "#ffd9e4",
+                        "primary": "#340b75",
+                        "tertiary-fixed-dim": "#ffb59c",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#d2bcff",
+                        "gradient-sunset-end": "#E8418F",
+                        "secondary": "#b3006b",
+                        "inverse-on-surface": "#f5eef8",
+                        "on-primary-fixed-variant": "#523294",
+                        "text-primary": "#1A1A1A",
+                        "outline": "#7a7583",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-highest": "#e7e0e9",
+                        "tertiary": "#511500",
+                        "axis-tazkiyyah": "#4B2A8C",
+                        "surface-container": "#f2ecf5",
+                        "on-background": "#1d1a21",
+                        "on-error": "#ffffff",
+                        "axis-ummah": "#E6288E",
+                        "on-primary-container": "#ba9aff",
+                        "surface-card": "#FFFFFF",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1d1a21",
+                        "error": "#ba1a1a",
+                        "gradient-sunset-mid": "#FF7A4A",
+                        "surface": "#fef7ff",
+                        "on-primary-fixed": "#24005b",
+                        "surface-bright": "#fef7ff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "section-margin": "24px",
+                        "internal-lg": "20px",
+                        "internal-sm": "8px",
+                        "screen-edge": "20px",
+                        "internal-md": "16px",
+                        "card-gap": "12px",
+                        "base": "8px"
+                    },
+                    fontFamily: {
+                        "display-xp": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-main": ["Plus Jakarta Sans", "sans-serif"],
+                        "arabic-subtext": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-tier": ["Plus Jakarta Sans", "sans-serif"],
+                        "display-xp-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-muted": ["Plus Jakarta Sans", "sans-serif"],
+                        "headline-tier-mobile": ["Plus Jakarta Sans", "sans-serif"],
+                        "section-label": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-xp": ["36px", { lineHeight: "44px", fontWeight: "700" }],
+                        "body-main": ["15px", { lineHeight: "22px", fontWeight: "400" }],
+                        "arabic-subtext": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-tier": ["24px", { lineHeight: "32px", fontWeight: "700" }],
+                        "display-xp-mobile": ["32px", { lineHeight: "40px", fontWeight: "700" }],
+                        "body-muted": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+                        "headline-tier-mobile": ["22px", { lineHeight: "28px", fontWeight: "700" }],
+                        "section-label": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }]
+                    },
+                    boxShadow: {
+                        'soft-ambient': '0 2px 12px rgba(0,0,0,0.06)',
+                        'level-up-glow': '0 0 30px rgba(255, 122, 74, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.8s ease-out;
+            stroke-dasharray: 502.4; /* 2 * PI * 80 */
+        }
+        .diagonal-hatch {
+            background-image: repeating-linear-gradient(45deg, #EFEBF5, #EFEBF5 10px, #E7E0E9 10px, #E7E0E9 20px);
+        }
+        .row-highlight {
+            transition: all 0.3s ease;
+        }
+        .row-highlight.active {
+            background-color: #f2ecf5;
+            transform: translateX(4px);
+            font-weight: bold;
+        }
+        .pop-animation {
+            animation: pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        
+        /* Level Up Animations */
+        .level-up-pop {
+            animation: levelUpPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        
+        .fade-out {
+            animation: fadeOut 0.4s ease-out forwards;
+        }
+        
+        .particle-burst {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1.1); }
+        }
+        
+        @keyframes levelUpPop {
+            0% { 
+                transform: scale(0.95) translateY(10px); 
+                opacity: 0;
+            }
+            100% { 
+                transform: scale(1) translateY(0); 
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeOut {
+            0% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.95); display: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .progress-ring-circle { transition: none; }
+            .pop-animation, .level-up-pop, .fade-out { animation: none; }
+            .row-highlight.active { transform: none; }
+        }
+
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        
+        .dashed-border-circle {
+            border: 2px dashed #4b2a8c;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-bg-app min-h-screen flex flex-col font-body-main text-text-primary antialiased relative">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between px-screen-edge h-16 w-full bg-surface dark:bg-on-background sticky top-0 z-50 transition-opacity duration-300" id="main-header">
+<button aria-label="Go back" class="material-symbols-outlined text-primary dark:text-primary-fixed hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+            arrow_back
+        </button>
+<h1 class="font-headline-tier-mobile text-headline-tier-mobile font-bold text-primary dark:text-primary-fixed">Session Complete</h1>
+<div class="w-6 h-6"></div>
+</header>
+<main class="flex-1 flex flex-col px-screen-edge py-section-margin gap-section-margin overflow-y-auto" id="main-content">
+<!-- Context Header -->
+<div class="text-center -mt-4">
+<p class="font-body-main text-text-muted">Forty Hadith — Thursday Class</p>
+</div>
+<!-- Hero: XP Ring & Level Up Area -->
+<section class="flex flex-col items-center pt-4 relative min-h-[260px]">
+<!-- Initial XP Display -->
+<div class="flex flex-col items-center w-full absolute inset-0 z-10" id="xp-hero-container">
+<div class="relative w-[180px] h-[180px] flex items-center justify-center">
+<svg class="absolute inset-0 w-full h-full transform -rotate-90" viewbox="0 0 180 180">
+<defs>
+<lineargradient id="sunset-gradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#FFC94B"></stop>
+<stop offset="50%" stop-color="#FF7A4A"></stop>
+<stop offset="100%" stop-color="#E8418F"></stop>
+</lineargradient>
+</defs>
+<circle cx="90" cy="90" fill="none" r="80" stroke="#EFEBF5" stroke-width="12"></circle>
+<circle class="progress-ring-circle" cx="90" cy="90" fill="none" id="xp-ring" r="80" stroke="url(#sunset-gradient)" stroke-linecap="round" stroke-width="12" style="stroke-dashoffset: 502.4;"></circle>
+</svg>
+<div class="text-center z-10 flex flex-col items-center mt-2">
+<span class="font-display-xp-mobile text-display-xp-mobile text-text-primary leading-none" id="xp-total-display">3,130</span>
+<span class="font-body-muted text-body-muted text-text-muted mt-1 font-semibold" id="xp-ratio-display">3,130 / 3,450 XP</span>
+</div>
+</div>
+<div class="text-center mt-6 flex flex-col items-center gap-2 w-full">
+<p class="font-body-main text-status-free font-bold transition-transform duration-300" id="xp-earned-pop">+320 XP earned</p>
+<div class="w-full flex flex-col items-center mt-2">
+<p class="font-body-muted text-[13px] text-text-muted"><span class="font-bold text-text-primary italic">Seeker 1</span> • Almost level 2</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Streak Card -->
+<section class="bg-[#FFF4E5] border border-[#FFD8A8] rounded-xl shadow-soft-ambient p-internal-lg flex flex-col gap-internal-md mt-4 relative z-10 transition-opacity duration-300" id="streak-section">
+<div class="flex justify-between items-baseline">
+<h2 class="font-body-main text-[17px] font-bold text-text-primary italic">Streak · 6 in a row</h2>
+<p class="font-body-muted text-text-muted">2 → Full Flame 2×</p>
+</div>
+<div class="flex justify-between items-end px-2">
+<!-- Flame 1-5 -->
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px] bg-gradient-to-tr from-gradient-sunset-start to-gradient-sunset-end gradient-text" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">1</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px] bg-gradient-to-tr from-gradient-sunset-start to-gradient-sunset-end gradient-text" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">2</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px] bg-gradient-to-tr from-gradient-sunset-start to-gradient-sunset-end gradient-text" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">3</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px] bg-gradient-to-tr from-gradient-sunset-start to-gradient-sunset-end gradient-text" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">4</span>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-[20px] bg-gradient-to-tr from-gradient-sunset-start to-gradient-sunset-end gradient-text" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">5</span>
+</div>
+<!-- Active Flame 6 -->
+<div class="flex flex-col items-center gap-1 scale-125 translate-y-[-4px]">
+<span class="material-symbols-outlined text-[28px] bg-gradient-to-tr from-gradient-sunset-start to-gradient-sunset-end gradient-text" style="font-variation-settings: 'FILL' 1; filter: drop-shadow(0 0 8px rgba(255, 122, 74, 0.4));">local_fire_department</span>
+<span class="text-[10px] text-text-primary font-bold">6</span>
+</div>
+<!-- Future Flames -->
+<div class="flex flex-col items-center gap-1 opacity-20">
+<span class="material-symbols-outlined text-[20px] text-text-muted">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">7</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-20">
+<span class="material-symbols-outlined text-[20px] text-text-muted">local_fire_department</span>
+<span class="text-[10px] text-text-muted font-bold">8</span>
+</div>
+</div>
+</section>
+<!-- Breakdown Card -->
+<section class="bg-surface-card rounded-xl shadow-soft-ambient p-internal-lg flex flex-col gap-internal-md relative z-10 transition-opacity duration-300" id="breakdown-section">
+<h3 class="font-section-label text-section-label text-text-muted uppercase">This Session</h3>
+<div class="flex flex-col gap-internal-sm mt-2">
+<div class="row-highlight flex justify-between items-center font-body-main text-text-primary p-2 rounded-lg" id="row-base">
+<span>Base XP</span>
+<span class="font-medium">100</span>
+</div>
+<div class="row-highlight flex justify-between items-center font-body-main text-text-primary p-2 rounded-lg" id="row-bonus">
+<span>Advanced bonus (+60%)</span>
+<span class="font-medium">+60</span>
+</div>
+<div class="row-highlight flex justify-between items-center font-body-main text-text-primary p-2 rounded-lg" id="row-streak">
+<span>Streak bonus (1.5×)</span>
+<span class="font-medium">+160</span>
+</div>
+</div>
+<hr class="border-t border-surface-dim my-2"/>
+<div class="flex justify-between items-center font-body-main px-2">
+<span class="font-bold text-text-primary">Total earned</span>
+<span class="font-bold text-status-free">+320 XP</span>
+</div>
+</section>
+<!-- Footer Actions -->
+<div class="mt-4 mb-screen-edge flex flex-col items-center gap-internal-lg relative z-10 transition-opacity duration-300" id="footer-actions">
+<button class="w-full h-[52px] rounded-full bg-gradient-to-r from-gradient-sunset-start via-gradient-sunset-mid to-gradient-sunset-end text-on-primary font-headline-tier-mobile text-headline-tier-mobile flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-md">
+                Continue
+            </button>
+</div>
+</main>
+<!-- Modal Level Up Overlay -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none bg-inverse-surface/60 backdrop-blur-sm transition-opacity duration-500 p-screen-edge" id="level-up-container">
+<div class="relative w-full max-w-sm bg-surface-card rounded-[20px] shadow-soft-ambient p-8 flex flex-col items-center text-center scale-95 opacity-0 transition-all duration-500" id="level-up-modal">
+<!-- Particle Container specific to this pop -->
+<div class="absolute inset-0 overflow-visible pointer-events-none" id="level-up-particles"></div>
+<p class="font-section-label text-[11px] tracking-[0.15em] text-text-muted mb-6 uppercase">Welcome · One-Time</p>
+<!-- Badge -->
+<div class="w-[100px] h-[100px] rounded-full flex items-center justify-center mb-6 relative z-10 dashed-border-circle bg-[#fefdfc]">
+<div class="w-[84px] h-[84px] rounded-full border-2 border-[#4b2a8c] flex items-center justify-center">
+<span class="font-display-xp text-[48px] text-primary" style="font-family: cursive; line-height: 1;">S</span>
+</div>
+</div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-center w-full">
+<h2 class="font-arabic-subtext text-[16px] text-primary mb-1 opacity-80">طالب</h2>
+<h3 class="font-display-xp-mobile text-[28px] text-primary mb-1 italic" style="font-family: cursive;">You're a Seeker.</h3>
+<p class="font-headline-tier text-[20px] text-text-primary mb-4 italic">The journey begins.</p>
+<p class="font-body-main text-[14px] text-text-muted mb-6 max-w-[280px] leading-relaxed">
+                    Every event you attend earns XP — classes, retreats, charity drives, talks. Streaks unlock bonuses. Finish a course or retreat for a milestone jump.
+                </p>
+<div class="w-full border-2 border-dashed border-text-primary rounded-xl p-4 bg-[#fdfaf5] mb-8">
+<p class="font-section-label text-[10px] text-text-muted mb-1 uppercase tracking-wider">Your First Check-In</p>
+<p class="font-display-xp-mobile text-[24px] text-primary italic mb-1" style="font-family: cursive;">+250 XP</p>
+<p class="font-body-muted text-[12px] text-text-muted">milestone unlocked</p>
+</div>
+<button class="w-full h-[52px] rounded-full bg-gradient-to-r from-gradient-sunset-start via-gradient-sunset-mid to-gradient-sunset-end text-on-primary font-headline-tier-mobile text-headline-tier-mobile flex items-center justify-center hover:opacity-90 active:scale-95 transition-all shadow-md">
+                    Continue
+                </button>
+</div>
+</div>
+</div>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const xpRing = document.getElementById('xp-ring');
+            const xpDisplay = document.getElementById('xp-total-display');
+            const xpRatioDisplay = document.getElementById('xp-ratio-display');
+            const xpEarnedPop = document.getElementById('xp-earned-pop');
+            
+            const levelUpContainer = document.getElementById('level-up-container');
+            const levelUpModal = document.getElementById('level-up-modal');
+            const levelUpParticles = document.getElementById('level-up-particles');
+            
+            const rows = {
+                base: document.getElementById('row-base'),
+                bonus: document.getElementById('row-bonus'),
+                streak: document.getElementById('row-streak')
+            };
+
+            const circumference = 2 * Math.PI * 80;
+            const xpTarget = 3450; 
+            
+            let currentXp = 3130;
+
+            function setRingProgress(xp) {
+                const percent = Math.min(xp / xpTarget, 1);
+                const offset = circumference - (percent * circumference);
+                xpRing.style.strokeDashoffset = offset;
+            }
+
+            function animateValue(start, end, duration, callback) {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const val = Math.floor(progress * (end - start) + start);
+                    xpDisplay.textContent = val.toLocaleString();
+                    xpRatioDisplay.textContent = val.toLocaleString() + ' / 3,450 XP';
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else if (callback) {
+                        callback();
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+            
+            function createBurstParticles() {
+                const colors = ['#4b2a8c', '#d2bcff', '#db1c86'];
+                const particleCount = 40;
+                
+                for(let i=0; i<particleCount; i++) {
+                    const p = document.createElement('div');
+                    p.classList.add('particle-burst');
+                    
+                    const size = Math.random() * 8 + 4;
+                    p.style.width = `${size}px`;
+                    p.style.height = `${size}px`;
+                    p.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    p.style.left = '50%';
+                    p.style.top = '20%';
+                    
+                    const angle = Math.random() * Math.PI * 2;
+                    const distance = Math.random() * 150 + 50;
+                    const tx = Math.cos(angle) * distance;
+                    const ty = Math.sin(angle) * distance;
+                    
+                    levelUpParticles.appendChild(p);
+                    
+                    p.animate([
+                        { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+                        { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(0)`, opacity: 0 }
+                    ], {
+                        duration: 1000 + Math.random() * 600,
+                        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+                        fill: 'forwards'
+                    });
+                }
+            }
+
+            // Initial State
+            setRingProgress(3130);
+
+            // Sequence Timing
+            setTimeout(() => {
+                // Step 1: Base
+                rows.base.classList.add('active');
+                setRingProgress(3230);
+                animateValue(3130, 3230, 800, () => {
+                    setTimeout(() => {
+                        rows.base.classList.remove('active');
+                        // Step 2: Bonus
+                        rows.bonus.classList.add('active');
+                        setRingProgress(3290);
+                        animateValue(3230, 3290, 800, () => {
+                            setTimeout(() => {
+                                rows.bonus.classList.remove('active');
+                                // Step 3: Streak - Reaches Full (Level Up Climax)
+                                rows.streak.classList.add('active');
+                                setRingProgress(3450);
+                                animateValue(3290, 3450, 800, () => {
+                                    setTimeout(() => {
+                                        rows.streak.classList.remove('active');
+                                        xpEarnedPop.classList.add('pop-animation');
+                                        
+                                        // Level Up Climax Sequence - Show centered modal
+                                        setTimeout(() => {
+                                            if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                                                levelUpContainer.classList.remove('pointer-events-none', 'opacity-0');
+                                                levelUpContainer.classList.add('opacity-100');
+                                                
+                                                setTimeout(() => {
+                                                    levelUpModal.classList.remove('scale-95', 'opacity-0');
+                                                    levelUpModal.classList.add('level-up-pop');
+                                                    createBurstParticles();
+                                                }, 100);
+                                            } else {
+                                                levelUpContainer.classList.remove('pointer-events-none', 'opacity-0');
+                                                levelUpContainer.classList.add('opacity-100');
+                                                levelUpModal.classList.remove('scale-95', 'opacity-0');
+                                                levelUpModal.style.opacity = '1';
+                                                levelUpModal.style.transform = 'scale(1)';
+                                            }
+                                        }, 800);
+                                        
+                                    }, 400);
+                                });
+                            }, 600);
+                        });
+                    }, 600);
+                });
+            }, 1000);
+        });
+    </script>
+</body></html>

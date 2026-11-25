@@ -1,0 +1,12 @@
+{
+  "name": "ondeen-admin-console",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OnDeen operations console for the user and organiser apps",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

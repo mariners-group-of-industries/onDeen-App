@@ -1,0 +1,5 @@
+Dear {CUSTOMER_NAME},
+ 
+You have Sent a new Buddy request to {BUDDY_NAME} for {EVENT_NAME}. Please review and take the necessary action.
+
+Thank you for choosing Ondeen. We hope to serve you again in the future.

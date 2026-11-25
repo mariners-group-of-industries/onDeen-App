@@ -1,0 +1,116 @@
+ENV['RCT_NEW_ARCH_ENABLED'] = '0'
+
+# Resolve react_native_pods.rb with node to allow for hoisting
+require Pod::Executable.execute_command('node', ['-p',
+  'require.resolve(
+    "react-native/scripts/react_native_pods.rb",
+    {paths: [process.argv[1]]},
+  )', __dir__]).strip
+
+platform :ios, min_ios_version_supported
+prepare_react_native_project!
+
+def apply_fmt_consteval_workaround(installer)
+  installer.pods_project.targets.each do |target|
+    next unless target.name == 'fmt'
+
+    target.build_configurations.each do |config|
+      definitions = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] || ['$(inherited)']
+      definitions = [definitions] if definitions.is_a?(String)
+      definitions << 'FMT_USE_CONSTEVAL=0' unless definitions.include?('FMT_USE_CONSTEVAL=0')
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = definitions
+      config.build_settings['CLANG_CXX_LANGUAGE_STANDARD'] = 'c++17'
+    end
+  end
+end
+
+def apply_react_remote_profile_workaround(installer)
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      definitions = config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] || ['$(inherited)']
+      definitions = [definitions] if definitions.is_a?(String)
+      definitions << 'RCT_REMOTE_PROFILE=0' unless definitions.include?('RCT_REMOTE_PROFILE=0')
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = definitions
+    end
+  end
+end
+
+def expose_react_dev_loading_protocol_header(installer)
+  target = installer.pods_project.targets.find { |pod_target| pod_target.name == 'React-Core.common' }
+  return unless target
+
+  [
+    'RCTDevLoadingViewProtocol.h',
+    'RCTDevLoadingViewSetEnabled.h',
+    'RCTInspectorDevServerHelper.h',
+    'RCTInspectorNetworkHelper.h',
+    'RCTInspectorUtils.h',
+    'RCTInspector.h',
+    'RCTInspectorPackagerConnection.h',
+    'RCTCxxInspectorPackagerConnection.h',
+    'RCTCxxInspectorPackagerConnectionDelegate.h',
+    'RCTCxxInspectorWebSocketAdapter.h',
+    'RCTPackagerClient.h',
+    'RCTPackagerConnection.h',
+    'RCTPausedInDebuggerOverlayController.h',
+  ].each do |header_name|
+    header = installer.pods_project.files.find { |file| file.display_name == header_name }
+    next unless header
+    next if target.headers_build_phase.files_references.include?(header)
+
+    build_file = target.headers_build_phase.add_file_reference(header, true)
+    build_file.settings = { 'ATTRIBUTES' => ['Public'] }
+  end
+end
+
+def add_react_dev_support_header_search_path(installer)
+  target = installer.pods_project.targets.find { |pod_target| pod_target.name == 'React-Core.common' }
+  return unless target
+
+  target.build_configurations.each do |config|
+    paths = config.build_settings['HEADER_SEARCH_PATHS'] || ['$(inherited)']
+    paths = [paths] if paths.is_a?(String)
+    [
+      '"$(PODS_TARGET_SRCROOT)/React/DevSupport"',
+      '"$(PODS_TARGET_SRCROOT)/React/Inspector"',
+    ].each do |react_header_path|
+      paths << react_header_path unless paths.include?(react_header_path)
+    end
+    config.build_settings['HEADER_SEARCH_PATHS'] = paths
+  end
+end
+
+linkage = ENV['USE_FRAMEWORKS']
+if linkage != nil
+  Pod::UI.puts "Configuring Pod with #{linkage}ally linked Frameworks".green
+  use_frameworks! :linkage => linkage.to_sym
+end
+
+target 'OnDeenOrganiser' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # An absolute path to your application root.
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  target 'OnDeenOrganiserTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  post_install do |installer|
+    # https://github.com/facebook/react-native/blob/main/packages/react-native/scripts/react_native_pods.rb#L197-L202
+    react_native_post_install(
+      installer,
+      config[:reactNativePath],
+      :mac_catalyst_enabled => false,
+      # :ccache_enabled => true
+    )
+    apply_fmt_consteval_workaround(installer)
+    apply_react_remote_profile_workaround(installer)
+    expose_react_dev_loading_protocol_header(installer)
+    add_react_dev_support_header_search_path(installer)
+  end
+end

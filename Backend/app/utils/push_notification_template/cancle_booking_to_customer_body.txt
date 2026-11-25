@@ -1,0 +1,5 @@
+Booking Cancelled Successfully!
+
+We have received your cancel request and refund is in process.
+Thank you for choosing  ONDEEN.
+We Will keep you updated.

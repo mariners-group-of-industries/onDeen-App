@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FeatureItemView" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="419"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMg-f5-vtf" customClass="GlobalGradientView" customModule="OnDeen" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="419"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ic_temp_speaker" translatesAutoresizingMaskIntoConstraints="NO" id="WGf-Yn-IK3">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="280"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugO-6X-oho">
+                            <rect key="frame" x="16.000000000000004" y="352" width="61.333333333333343" height="20"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SR 200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsC-ng-CeV" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                    <rect key="frame" x="12" y="4" width="37.333333333333336" height="12"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="FFF7E1"/>
+                            <constraints>
+                                <constraint firstItem="UsC-ng-CeV" firstAttribute="leading" secondItem="ugO-6X-oho" secondAttribute="leading" constant="12" id="HZV-yf-z3t"/>
+                                <constraint firstAttribute="bottom" secondItem="UsC-ng-CeV" secondAttribute="bottom" constant="4" id="WlE-BO-gWY"/>
+                                <constraint firstAttribute="trailing" secondItem="UsC-ng-CeV" secondAttribute="trailing" constant="12" id="adZ-Ii-O54"/>
+                                <constraint firstItem="UsC-ng-CeV" firstAttribute="top" secondItem="ugO-6X-oho" secondAttribute="top" constant="4" id="srl-GK-zXE"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="ic_forward" translatesAutoresizingMaskIntoConstraints="NO" id="T40-HJ-Z09">
+                            <rect key="frame" x="341" y="318" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="T40-HJ-Z09" secondAttribute="height" id="Lgk-QC-qPk"/>
+                                <constraint firstAttribute="height" constant="36" id="zLN-bU-RGd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Luxury Desert Safari Dubai..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHl-JR-0rH" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                            <rect key="frame" x="16" y="324" width="317" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="SAO-dO-pBp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SxF-P5-GwJ">
+                            <rect key="frame" x="16" y="296" width="84" height="16"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_calander" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-7T-DGz">
+                                    <rect key="frame" x="0.0" y="0.0" width="14" height="16"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 Aug 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob6-8j-GVo" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                    <rect key="frame" x="18" y="0.0" width="66" height="16"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_wishlist_ffffff" translatesAutoresizingMaskIntoConstraints="NO" id="s4b-t9-kLF">
+                            <rect key="frame" x="356" y="19" width="21" height="20"/>
+                        </imageView>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="voK-wv-QH4">
+                            <rect key="frame" x="16" y="16" width="328" height="22"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Jef-7n-GSv"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="4" minimumInteritemSpacing="4" id="Nti-Ky-bZJ">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="WGf-Yn-IK3" firstAttribute="leading" secondItem="OMg-f5-vtf" secondAttribute="leading" id="27v-A4-uqY"/>
+                        <constraint firstAttribute="bottom" secondItem="ugO-6X-oho" secondAttribute="bottom" constant="16" id="4rh-8t-HP9"/>
+                        <constraint firstItem="PHl-JR-0rH" firstAttribute="top" secondItem="SxF-P5-GwJ" secondAttribute="bottom" constant="12" id="6em-bq-bfj"/>
+                        <constraint firstItem="WGf-Yn-IK3" firstAttribute="top" secondItem="OMg-f5-vtf" secondAttribute="top" id="BWC-Ys-utc"/>
+                        <constraint firstAttribute="trailing" secondItem="T40-HJ-Z09" secondAttribute="trailing" constant="16" id="COk-d4-QJ4"/>
+                        <constraint firstItem="s4b-t9-kLF" firstAttribute="trailing" secondItem="T40-HJ-Z09" secondAttribute="trailing" id="Eb1-wX-Qza"/>
+                        <constraint firstItem="SxF-P5-GwJ" firstAttribute="top" secondItem="WGf-Yn-IK3" secondAttribute="bottom" constant="16" id="Gy9-iF-Nw7"/>
+                        <constraint firstAttribute="trailing" secondItem="WGf-Yn-IK3" secondAttribute="trailing" id="IAN-dI-orb"/>
+                        <constraint firstItem="T40-HJ-Z09" firstAttribute="leading" secondItem="PHl-JR-0rH" secondAttribute="trailing" constant="8" id="IyB-k1-qip"/>
+                        <constraint firstItem="voK-wv-QH4" firstAttribute="leading" secondItem="SxF-P5-GwJ" secondAttribute="leading" id="NNz-wx-IQZ"/>
+                        <constraint firstItem="ugO-6X-oho" firstAttribute="leading" secondItem="OMg-f5-vtf" secondAttribute="leading" constant="16" id="RXi-2b-s59"/>
+                        <constraint firstItem="ugO-6X-oho" firstAttribute="top" secondItem="PHl-JR-0rH" secondAttribute="bottom" constant="4" id="Uqh-WT-BIt"/>
+                        <constraint firstItem="s4b-t9-kLF" firstAttribute="top" secondItem="OMg-f5-vtf" secondAttribute="top" constant="19" id="WQt-7r-S6h"/>
+                        <constraint firstItem="voK-wv-QH4" firstAttribute="top" secondItem="OMg-f5-vtf" secondAttribute="top" constant="16" id="YgO-KM-zP4"/>
+                        <constraint firstItem="SxF-P5-GwJ" firstAttribute="leading" secondItem="PHl-JR-0rH" secondAttribute="leading" id="akW-OU-XbO"/>
+                        <constraint firstItem="s4b-t9-kLF" firstAttribute="leading" secondItem="voK-wv-QH4" secondAttribute="trailing" constant="12" id="hvl-Xg-YtL"/>
+                        <constraint firstItem="T40-HJ-Z09" firstAttribute="centerY" secondItem="PHl-JR-0rH" secondAttribute="centerY" id="uYe-fg-V7j"/>
+                        <constraint firstItem="PHl-JR-0rH" firstAttribute="leading" secondItem="ugO-6X-oho" secondAttribute="leading" id="yF8-Yq-UjO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OMg-f5-vtf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1Sf-qP-OYa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OMg-f5-vtf" secondAttribute="trailing" id="6fO-jj-GUF"/>
+                <constraint firstItem="OMg-f5-vtf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NhB-ew-tO8"/>
+                <constraint firstAttribute="bottom" secondItem="OMg-f5-vtf" secondAttribute="bottom" id="bGH-sz-hZU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-74.045801526717554" y="298.94366197183098"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_calander" width="14" height="16"/>
+        <image name="ic_forward" width="35" height="36"/>
+        <image name="ic_temp_speaker" width="358" height="280"/>
+        <image name="ic_wishlist_ffffff" width="21" height="20"/>
+        <namedColor name="FFF7E1">
+            <color red="1" green="0.96899998188018799" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

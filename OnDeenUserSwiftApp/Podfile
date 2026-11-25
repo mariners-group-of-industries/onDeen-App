@@ -1,0 +1,37 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '13.0'
+
+target 'OnDeen' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for OnDeen
+pod 'PhoneNumberKit', '~> 3.7'
+pod 'IQKeyboardManagerSwift'
+pod 'FSCalendar'
+pod 'CountryPickerView'
+pod 'SDWebImage'
+pod "ImageSlideshow/SDWebImage"
+pod 'SwiftyAttributes'
+pod 'SVGKit'
+pod 'SDWebImageSVGCoder'
+pod 'Firebase/Auth'
+pod 'lottie-ios'
+pod 'GLWalkthrough'
+pod 'Firebase/Messaging'
+pod 'GoogleSignIn'
+pod 'PrettyCards'
+pod 'JTAppleCalendar', '~> 8.0'
+pod 'Lightbox'
+pod 'Firebase/Analytics'
+pod 'Firebase/DynamicLinks'
+end
+post_install do |installer|
+    installer.generated_projects.each do |project|
+        project.targets.each do |target|
+            target.build_configurations.each do |config|
+                config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+            end
+        end
+    end
+end

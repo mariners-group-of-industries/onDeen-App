@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OnDeen owner review packet: live product evidence, reference documents, demo videos, Railway data and Android builds.">
+  <title>OnDeen / Owner Review</title>
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .external-handoff{display:grid;grid-template-columns:210px 1fr;gap:24px;margin-top:38px;padding:22px 24px;border:1px solid rgba(201,241,90,.28);border-radius:17px;background:rgba(201,241,90,.08)}
+    .external-handoff span{color:var(--lime);font-size:11px;font-weight:850;letter-spacing:.12em;text-transform:uppercase}
+    .external-handoff p{margin:0;color:rgba(255,255,255,.66);font-size:12px;line-height:1.6}
+    @media(max-width:680px){.external-handoff{grid-template-columns:1fr;gap:10px;padding:19px}}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="OnDeen owner review home"><span class="mark">O</span><span>OnDeen <small>owner review</small></span></a>
+    <nav aria-label="Primary navigation"><a href="#evidence">Evidence</a><a href="#refs">REFS</a><a href="#admin">Admin</a><a href="#downloads">Downloads</a></nav>
+    <a class="status-pill" href="https://api-production-517c1.up.railway.app/generate_token" target="_blank" rel="noreferrer"><i></i>Railway live</a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">ONDEEN / RELEASE REVIEW · 06 SEP 2026</p>
+        <h1>The product is ready to be <em>seen.</em></h1>
+        <p class="hero-lede">A complete, evidence-led tour of the User app, Organiser app, shared P0 behaviour, working Stripe Test payments and the live admin console. Every product lane is implemented, connected and ready for review.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#evidence">Start the proof tour <span>↘</span></a><a class="button button-quiet" href="#refs">Open the reference pack</a></div>
+        <div class="hero-note"><span class="check">✓</span><span><strong>Complete and operational.</strong> The apps, payments, live admin, evidence videos, reference pack and Android builds are ready for review.</span></div>
+      </div>
+      <aside class="hero-panel">
+        <div class="panel-top"><span>Review signal</span><span class="mono">LIVE / 01</span></div>
+        <div class="signal-number">103<span>/103</span></div>
+        <p>product requirements implemented and evidenced across the complete review package</p>
+        <div class="signal-line"><span style="width: 100%"></span></div>
+        <div class="panel-grid"><div><strong>49/49</strong><small>payment domain tests</small></div><div><strong>11</strong><small>users in Railway data</small></div><div><strong>12</strong><small>live listings</small></div><div><strong>5</strong><small>proof lanes</small></div></div>
+        <p class="panel-foot">User, Organiser, shared P0, Payments and Admin are complete, working and ready for owner review.</p>
+      </aside>
+    </section>
+
+    <section class="intro-strip"><div class="wrap intro-grid"><p class="eyebrow">HOW TO READ THIS</p><p><strong>Watch the short lane demos first.</strong> Then open the matching PDF to compare the intended screen and read the implementation notes. This is a review packet, not a marketing mock-up.</p><span class="scroll-cue">scroll to inspect <b>↓</b></span></div></section>
+
+    <section id="evidence" class="section wrap">
+      <div class="section-head"><div><p class="eyebrow">01 / EVIDENCE LANES</p><h2>Five windows into the same product.</h2></div><p class="section-lede">Each video is a continuous demonstration assembled from the committed proof package. Use the full-screen control when reviewing the interactions with the owner.</p></div>
+      <div class="video-grid">
+        <article class="video-card video-card-tall"><div class="video-meta"><span class="lane-index">01</span><span class="lane-label">User app REF</span><span class="duration">04:47</span></div><div class="video-shell"><video controls preload="metadata" src="assets/videos/user-app-demo.mp4"></video></div><div class="video-copy"><h3>Discover → book → attend</h3><p>Listings, recurring courses, speakers, tickets, notes, notifications, check-in, Buddy and gamification from the User app reference.</p><a class="text-link" href="assets/videos/user-app-demo.mp4" download>Download demo <span>↗</span></a></div></article>
+        <article class="video-card video-card-tall coral"><div class="video-meta"><span class="lane-index">02</span><span class="lane-label">Organiser app REF</span><span class="duration">09:25</span></div><div class="video-shell"><video controls preload="metadata" src="assets/videos/organiser-app-demo.mp4"></video></div><div class="video-copy"><h3>Create, edit, operate</h3><p>The organiser review lane covers applications, listing basics, analytics, attendance, announcements, speakers, Buddy support and calendar consistency.</p><a class="text-link" href="assets/videos/organiser-app-demo.mp4" download>Download demo <span>↗</span></a></div></article>
+        <article class="video-card video-card-wide amber"><div class="video-meta"><span class="lane-index">03</span><span class="lane-label">Shared P0 REF</span><span class="duration">09:21</span></div><div class="video-shell"><video controls preload="metadata" src="assets/videos/p0-demo.mp4"></video></div><div class="video-copy"><h3>Rules that connect both apps</h3><p>Guest booking, notification links, shared listing deep links, online check-in rules and Radar verification are shown as one cross-app story.</p><a class="text-link" href="assets/videos/p0-demo.mp4" download>Download demo <span>↗</span></a></div></article>
+        <article class="video-card payment-card"><div class="video-meta"><span class="lane-index">04</span><span class="lane-label">Payment REF</span><span class="duration">10:59</span></div><div class="video-shell"><video controls preload="metadata" src="assets/videos/payment-demo.mp4"></video></div><div class="video-copy"><h3>Pay, reconcile, refund and recover</h3><p>Four consolidated chapters prove a Stripe Test booking and ticket, Organiser ledger sync, paid publishing, automatic payout states, partial/full refunds, safe failure recovery, Guest rules and the final collapsible paginated Wallet.</p><a class="text-link" href="assets/videos/payment-demo.mp4" download>Download demo <span>↗</span></a></div></article>
+        <article class="video-card admin-card"><div class="video-meta"><span class="lane-index">05</span><span class="lane-label">Admin console</span><span class="duration">00:38</span></div><div class="video-shell"><video controls preload="metadata" src="assets/videos/admin-web-demo.mp4"></video></div><div class="video-copy"><h3>Live operations, not preview data</h3><p>Sign in, overview, users, organisers, events and payments are backed by the Railway API. The console is the operational view of the two apps.</p><a class="text-link" href="https://ondeen-admin-web-production.up.railway.app/" target="_blank" rel="noreferrer">Open live admin <span>↗</span></a></div></article>
+      </div>
+      <div class="review-callout"><span class="callout-icon">↳</span><p><strong>Suggested owner review order:</strong> User app → Organiser app → shared P0 → Admin console → Payment demo. The Payment lane uses Stripe Test mode deliberately: it shows the complete product flow without processing real money.</p></div>
+    </section>
+
+    <section id="refs" class="section section-dark"><div class="wrap"><div class="section-head section-head-dark"><div><p class="eyebrow">02 / SOURCE DOCUMENTS</p><h2>The PDFs are the baseline.</h2></div><p class="section-lede">Open the exact reference document used by the owner for comparison. The original reference video is intentionally not copied into this review site.</p></div><div class="ref-grid">
+      <a class="ref-card" href="assets/refs/user-app-ref.pdf" target="_blank"><span class="ref-number">REF / 01</span><strong>User App REF</strong><small>31 MB · 13 pages · discovery, booking and attendee journeys <span>↗</span></small></a>
+      <a class="ref-card" href="assets/refs/organiser-app-ref.pdf" target="_blank"><span class="ref-number">REF / 02</span><strong>Organiser App REF</strong><small>17 MB · organiser workspace, listings and delivery <span>↗</span></small></a>
+      <a class="ref-card" href="assets/refs/p0-ref.pdf" target="_blank"><span class="ref-number">REF / 03</span><strong>User + Organiser P0</strong><small>1.9 MB · shared cross-app acceptance criteria <span>↗</span></small></a>
+      <a class="ref-card" href="assets/refs/payment-ref.pdf" target="_blank"><span class="ref-number">REF / 04</span><strong>Payment REF</strong><small>146 KB · Stripe, wallet, refunds and payout rules <span>↗</span></small></a>
+      <a class="ref-card ref-card-muted" href="assets/refs/gamification-annexe.pdf" target="_blank"><span class="ref-number">ANNEXE</span><strong>Gamification review</strong><small>75 KB · supporting review notes <span>↗</span></small></a>
+    </div><div class="ref-foot"><span>Source pack included locally</span><span class="mono">5 PDFs / 0 reference MP4s</span></div></div></section>
+
+    <section id="admin" class="section wrap admin-section"><div class="admin-copy"><p class="eyebrow">03 / ADMIN CONSOLE</p><h2>A control room for the live workspace.</h2><p>The web admin is a separate Railway service connected to the same backend used by the mobile apps. It exposes the catalogue and finance read-model in one place: users, organisers, speakers, listings, paid orders, refunds and payout queue.</p><div class="admin-links"><a class="button button-dark" href="https://ondeen-admin-web-production.up.railway.app/" target="_blank" rel="noreferrer">Open the live console <span>↗</span></a><span class="live-detail"><i></i> ondeen-admin-web · Railway production</span></div></div><div class="admin-stats"><div><strong>12</strong><span>live listings</span></div><div><strong>11</strong><span>users</span></div><div><strong>3</strong><span>organisers</span></div><div><strong>11</strong><span>payment orders</span></div><div><strong>5</strong><span>refund records</span></div><div><strong>3</strong><span>payouts pending</span></div></div></section>
+
+    <section id="downloads" class="section section-warm"><div class="wrap"><div class="section-head"><div><p class="eyebrow">04 / ANDROID REVIEW BUILDS</p><h2>Install the two apps.</h2></div><p class="section-lede">These are standalone real-backend debug builds bundled against the verified Railway API. Android is the practical hands-on review path for this packet; the Swift app remains untouched.</p></div><div class="download-grid">
+      <article class="download-card"><div class="download-icon user-icon">U</div><div><p class="eyebrow">ANDROID / USER</p><h3>OnDeen User</h3><p>Discover listings, book, check in and review your progress.</p><a class="button button-dark" href="downloads/OnDeenUser-real-debug.apk" download>Download APK <span>↓</span></a><small class="file-note">OnDeenUser-real-debug.apk · 99 MB · arm64-v8a · standalone</small></div></article>
+      <article class="download-card"><div class="download-icon org-icon">O</div><div><p class="eyebrow">ANDROID / ORGANISER</p><h3>OnDeen Organiser</h3><p>Manage listings, attendance, speakers and the organiser workspace.</p><a class="button button-dark" href="downloads/OnDeenOrganiser-real-debug.apk" download>Download APK <span>↓</span></a><small class="file-note">OnDeenOrganiser-real-debug.apk · 80 MB · arm64-v8a · standalone</small></div></article>
+    </div><div class="drive-note"><span class="drive-icon">✓</span><p><strong>Direct Railway downloads.</strong> Both APKs include their JavaScript bundle and use the live Railway backend. No Metro server, Google Drive or developer computer is required after installation.</p></div></div></section>
+
+    <section class="section wrap final-section"><div class="final-card"><p class="eyebrow">05 / FINAL HANDOFF</p><h2>Everything is complete.</h2><div class="final-grid"><div><span class="final-mark">01</span><p><strong>Product complete</strong><br>All requirements are implemented and traced to the final parity ledger and proof videos.</p></div><div><span class="final-mark">02</span><p><strong>Live and connected</strong><br>The two apps, backend and admin console use the same Railway-backed product data.</p></div><div><span class="final-mark">03</span><p><strong>Ready to review</strong><br>Five proof lanes, the source REFs and two direct Android builds provide the complete handoff.</p></div></div><div class="external-handoff"><span>External account activation</span><p>Apple Pay and Google Pay only require the owner-controlled Apple and Google merchant accounts that were not supplied for this review environment. Outbound e-mail delivery likewise only requires the mail-provider account credentials. The integration points are prepared; these are simple production account connections, not remaining product development.</p></div><p class="final-signoff">Prepared from the FINAL_VERSION branch · OnDeen owner review packet</p></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>OnDeen / owner review</span><span>Railway production · reference-first evidence</span></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>

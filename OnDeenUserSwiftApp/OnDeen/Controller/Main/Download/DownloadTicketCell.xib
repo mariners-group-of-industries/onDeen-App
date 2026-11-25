@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DownloadTicketCell" rowHeight="182" id="KGk-i7-Jjw" customClass="DownloadTicketCell" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="182"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="M30-Zd-30s">
+                        <rect key="frame" x="0.0" y="12" width="320" height="158"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="biR-Hs-HC6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="131.66666666666666"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ikU-PE-Gp9">
+                                        <rect key="frame" x="203" y="23.333333333333343" width="85" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="85" id="NYa-EG-fXG"/>
+                                            <constraint firstAttribute="height" constant="85" id="RHg-4h-JAJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="zyb-Db-4f5">
+                                        <rect key="frame" x="20" y="16" width="167" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDN-am-idk" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="15.666666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="B8ADC4"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ticket ID : 7923e981298eu81" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T65-c0-Wyo" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="27.666666666666661" width="167" height="14.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="17101F"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gVR-XM-68e">
+                                        <rect key="frame" x="20" y="68.666666666666657" width="167" height="45.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6Q-d7-wq5" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="167" height="19.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                <color key="textColor" name="161616"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ticket ID : 7923e981298eu81" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0C-tX-TWv" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="31.333333333333325" width="167" height="14.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" name="545454"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="V2h-yC-gHb">
+                                        <rect key="frame" x="292.33333333333331" y="56.333333333333343" width="19.666666666666686" height="19"/>
+                                        <color key="tintColor" name="DB3171"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="FEFDFF"/>
+                                <constraints>
+                                    <constraint firstItem="ikU-PE-Gp9" firstAttribute="centerY" secondItem="biR-Hs-HC6" secondAttribute="centerY" id="3eh-Hz-cDu"/>
+                                    <constraint firstItem="V2h-yC-gHb" firstAttribute="centerY" secondItem="biR-Hs-HC6" secondAttribute="centerY" id="5sh-21-vTh"/>
+                                    <constraint firstItem="gVR-XM-68e" firstAttribute="leading" secondItem="zyb-Db-4f5" secondAttribute="leading" id="8AD-MR-Hx9"/>
+                                    <constraint firstItem="gVR-XM-68e" firstAttribute="top" secondItem="zyb-Db-4f5" secondAttribute="bottom" constant="12" id="A4P-sy-HgM"/>
+                                    <constraint firstAttribute="bottom" secondItem="gVR-XM-68e" secondAttribute="bottom" constant="16" id="FmZ-8n-5j3"/>
+                                    <constraint firstItem="zyb-Db-4f5" firstAttribute="top" secondItem="biR-Hs-HC6" secondAttribute="top" constant="16" id="TCM-kM-kfM"/>
+                                    <constraint firstItem="zyb-Db-4f5" firstAttribute="leading" secondItem="biR-Hs-HC6" secondAttribute="leading" constant="20" id="Wsg-yT-Ad6"/>
+                                    <constraint firstAttribute="trailing" secondItem="ikU-PE-Gp9" secondAttribute="trailing" constant="32" id="jcJ-Sa-10M"/>
+                                    <constraint firstItem="gVR-XM-68e" firstAttribute="trailing" secondItem="zyb-Db-4f5" secondAttribute="trailing" id="l2l-Wi-2Yp"/>
+                                    <constraint firstItem="ikU-PE-Gp9" firstAttribute="leading" secondItem="zyb-Db-4f5" secondAttribute="trailing" constant="16" id="nN8-Np-XKE"/>
+                                    <constraint firstAttribute="trailing" secondItem="V2h-yC-gHb" secondAttribute="trailing" constant="8" id="rFo-CJ-ae3"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="7ev-WG-soI">
+                                <rect key="frame" x="0.0" y="143.66666666666666" width="320" height="14.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You’ve 6 Economy ticketcs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2At-kd-n9z">
+                                        <rect key="frame" x="0.0" y="0.0" width="269.33333333333331" height="14.333333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="View all" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="di9-ee-kfT">
+                                        <rect key="frame" x="275.33333333333331" y="0.0" width="44.666666666666686" height="14.333333333333334"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                        <color key="textColor" name="DB3171"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="M30-Zd-30s" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Qny-Ry-3jY"/>
+                    <constraint firstItem="M30-Zd-30s" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VEb-rU-RBB"/>
+                    <constraint firstAttribute="bottom" secondItem="M30-Zd-30s" secondAttribute="bottom" constant="12" id="cAP-da-6Ap"/>
+                    <constraint firstAttribute="trailing" secondItem="M30-Zd-30s" secondAttribute="trailing" id="mrY-Hm-6mn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bgView" destination="biR-Hs-HC6" id="VZh-iJ-eEP"/>
+                <outlet property="footerStack" destination="7ev-WG-soI" id="so9-fq-uux"/>
+                <outlet property="imgQR" destination="ikU-PE-Gp9" id="jNr-w5-aQE"/>
+                <outlet property="lblAmount" destination="E0C-tX-TWv" id="aO3-pg-gZr"/>
+                <outlet property="lblCount" destination="nDN-am-idk" id="6Qp-cP-ZjG"/>
+                <outlet property="lblDownload" destination="V2h-yC-gHb" id="bGO-FS-Kdb"/>
+                <outlet property="lblTicketId" destination="T65-c0-Wyo" id="5cr-pg-6uY"/>
+                <outlet property="lblTitle" destination="M6Q-d7-wq5" id="C3I-xL-Z1c"/>
+                <outlet property="lblTotalTickets" destination="2At-kd-n9z" id="kFF-Tr-D9c"/>
+                <outlet property="lblViewAll" destination="di9-ee-kfT" id="Itm-nt-Lt5"/>
+            </connections>
+            <point key="canvasLocation" x="-21.374045801526716" y="19.014084507042256"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow.down.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="161616">
+            <color red="0.086000002920627594" green="0.086000002920627594" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="17101F">
+            <color red="0.090196078431372548" green="0.062745098039215685" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="545454">
+            <color red="0.32941176470588235" green="0.32941176470588235" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="B8ADC4">
+            <color red="0.72156862745098038" green="0.67843137254901964" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DB3171">
+            <color red="0.85900002717971802" green="0.19200000166893005" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FEFDFF">
+            <color red="0.99607843137254903" green="0.99215686274509807" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CalanderNoEventCell" rowHeight="286" id="KGk-i7-Jjw" customClass="CalanderNoEventCell" customModule="OnDeen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="286"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_no_events" translatesAutoresizingMaskIntoConstraints="NO" id="XJI-eh-wyF">
+                        <rect key="frame" x="96" y="15" width="128" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="XJI-eh-wyF" secondAttribute="height" id="c0W-L6-SaC"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rCh-Gv-5OY">
+                        <rect key="frame" x="48" y="155" width="224" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU DO NOT HAVE ANY ACTIVE BOOKING" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KU8-Er-nVM" customClass="AllRoundLabel" customModule="OnDeen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="224" height="40.666666666666664"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="0E0D0E"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book events happening near you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47P-x6-0xc" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="45.666666666666657" width="224" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" name="161616"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNp-RV-KqT" customClass="GlobalGradientView" customModule="OnDeen" customModuleProvider="target">
+                        <rect key="frame" x="57.000000000000014" y="227" width="206.33333333333337" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLORE EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRQ-ou-nqU" customClass="SFProLabel" customModule="OnDeen" customModuleProvider="target">
+                                <rect key="frame" x="35" y="14.333333333333341" width="136.33333333333334" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="HRQ-ou-nqU" secondAttribute="trailing" constant="35" id="5rF-BE-zkD"/>
+                            <constraint firstAttribute="height" constant="48" id="Kdk-bE-CtA"/>
+                            <constraint firstItem="HRQ-ou-nqU" firstAttribute="leading" secondItem="PNp-RV-KqT" secondAttribute="leading" constant="35" id="OSr-ya-eJV"/>
+                            <constraint firstItem="HRQ-ou-nqU" firstAttribute="centerY" secondItem="PNp-RV-KqT" secondAttribute="centerY" id="gec-2V-69f"/>
+                            <constraint firstItem="HRQ-ou-nqU" firstAttribute="centerX" secondItem="PNp-RV-KqT" secondAttribute="centerX" id="psj-oB-AtK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XJI-eh-wyF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="4Yu-B9-svm"/>
+                    <constraint firstItem="PNp-RV-KqT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5In-NS-Fcv"/>
+                    <constraint firstItem="rCh-Gv-5OY" firstAttribute="top" secondItem="XJI-eh-wyF" secondAttribute="bottom" constant="12" id="7vb-3p-QBv"/>
+                    <constraint firstAttribute="bottom" secondItem="PNp-RV-KqT" secondAttribute="bottom" constant="11" id="JyY-Pe-qQd"/>
+                    <constraint firstItem="XJI-eh-wyF" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.4" id="NEM-zt-SAl"/>
+                    <constraint firstItem="rCh-Gv-5OY" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OFZ-MM-3SF"/>
+                    <constraint firstItem="XJI-eh-wyF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="PhT-ro-iKi"/>
+                    <constraint firstItem="PNp-RV-KqT" firstAttribute="top" secondItem="rCh-Gv-5OY" secondAttribute="bottom" constant="12" id="xPc-MA-I4j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rCh-Gv-5OY" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="0.7" id="46w-9v-hd1"/>
+            </constraints>
+            <connections>
+                <outlet property="exploreView" destination="PNp-RV-KqT" id="MYy-bg-XEJ"/>
+                <outlet property="lblSubtitle" destination="47P-x6-0xc" id="OvD-Hf-IWQ"/>
+                <outlet property="lblTitle" destination="KU8-Er-nVM" id="pod-HT-H1a"/>
+            </connections>
+            <point key="canvasLocation" x="58.015267175572518" y="52.816901408450704"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_no_events" width="154" height="164"/>
+        <namedColor name="0E0D0E">
+            <color red="0.054901960784313725" green="0.050980392156862744" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="161616">
+            <color red="0.086000002920627594" green="0.086000002920627594" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

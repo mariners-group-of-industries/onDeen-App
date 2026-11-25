@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TSDatePicker" customModule="OnDeen" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="sdx-f7-pSW" id="DqT-qT-jpZ"/>
+                <outlet property="btnCancel" destination="Pgf-Tm-FpI" id="N4T-Gh-Mgr"/>
+                <outlet property="btnOk" destination="6Rs-n0-x1M" id="nLv-PK-eRv"/>
+                <outlet property="datePicker" destination="DYn-Vj-CAJ" id="Jod-51-MDU"/>
+                <outlet property="lblTitle" destination="TUt-Na-k7m" id="APe-fQ-WOq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sdx-f7-pSW">
+                    <rect key="frame" x="20" y="546" width="374" height="306"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvW-Ap-evG">
+                            <rect key="frame" x="0.0" y="256" width="374" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PYp-Cn-lQU">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-Tm-FpI" customClass="TyButton" customModule="OnDeen" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="186" height="50"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Cancel">
+                                                <color key="titleColor" name="2A2821"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="Cancel"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rs-n0-x1M" customClass="TyButton" customModule="OnDeen" customModuleProvider="target">
+                                            <rect key="frame" x="188" y="0.0" width="186" height="50"/>
+                                            <color key="backgroundColor" name="DB3171"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                            <state key="normal" title="Ok">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizableString" value="Ok"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="DB3171"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="24C-30-USl"/>
+                                <constraint firstAttribute="bottom" secondItem="PYp-Cn-lQU" secondAttribute="bottom" id="FUz-ah-ggW"/>
+                                <constraint firstAttribute="trailing" secondItem="PYp-Cn-lQU" secondAttribute="trailing" id="sTE-cO-bFv"/>
+                                <constraint firstItem="PYp-Cn-lQU" firstAttribute="leading" secondItem="fvW-Ap-evG" secondAttribute="leading" id="uQ2-yQ-LxW"/>
+                                <constraint firstItem="PYp-Cn-lQU" firstAttribute="top" secondItem="fvW-Ap-evG" secondAttribute="top" id="v31-Uk-KSd"/>
+                            </constraints>
+                        </view>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="DYn-Vj-CAJ">
+                            <rect key="frame" x="20" y="20" width="334" height="216"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="DYn-Vj-CAJ" firstAttribute="leading" secondItem="sdx-f7-pSW" secondAttribute="leading" constant="20" id="23h-Uy-0UC"/>
+                        <constraint firstItem="fvW-Ap-evG" firstAttribute="leading" secondItem="sdx-f7-pSW" secondAttribute="leading" id="McS-f2-n9i"/>
+                        <constraint firstAttribute="trailing" secondItem="fvW-Ap-evG" secondAttribute="trailing" id="ODj-ow-dJb"/>
+                        <constraint firstItem="DYn-Vj-CAJ" firstAttribute="top" secondItem="sdx-f7-pSW" secondAttribute="top" constant="20" id="Yh8-MS-MZ3"/>
+                        <constraint firstItem="fvW-Ap-evG" firstAttribute="top" secondItem="DYn-Vj-CAJ" secondAttribute="bottom" constant="20" id="aIi-ZQ-CEW"/>
+                        <constraint firstAttribute="bottom" secondItem="fvW-Ap-evG" secondAttribute="bottom" id="jnE-Li-LCL"/>
+                        <constraint firstAttribute="trailing" secondItem="DYn-Vj-CAJ" secondAttribute="trailing" constant="20" id="w0k-12-yvC"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUt-Na-k7m" customClass="TYLabel" customModule="OnDeen" customModuleProvider="target">
+                    <rect key="frame" x="20" y="493" width="374" height="50"/>
+                    <color key="backgroundColor" name="DB3171"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="u6T-2W-kPR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sdx-f7-pSW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="5ru-jt-STO"/>
+                <constraint firstItem="TUt-Na-k7m" firstAttribute="trailing" secondItem="sdx-f7-pSW" secondAttribute="trailing" id="BXQ-uG-NwU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sdx-f7-pSW" secondAttribute="trailing" constant="20" id="Rem-s1-Mmf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sdx-f7-pSW" secondAttribute="bottom" constant="10" id="Tid-xz-d39"/>
+                <constraint firstItem="TUt-Na-k7m" firstAttribute="leading" secondItem="sdx-f7-pSW" secondAttribute="leading" id="l6a-Ln-j9v"/>
+                <constraint firstItem="sdx-f7-pSW" firstAttribute="top" secondItem="TUt-Na-k7m" secondAttribute="bottom" constant="3" id="tnc-fT-QQF"/>
+            </constraints>
+            <point key="canvasLocation" x="89.855072463768124" y="85.714285714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="2A2821">
+            <color red="0.16500000655651093" green="0.15700000524520874" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="DB3171">
+            <color red="0.85900002717971802" green="0.19200000166893005" blue="0.44299998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
