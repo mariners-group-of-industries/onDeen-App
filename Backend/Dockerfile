@@ -18,6 +18,7 @@ RUN pip install --upgrade pip \
     && pip install -r requirements.txt
 
 COPY . .
-RUN chmod +x ruh.sh
+# Uploads from Windows lose the executable bit, so set it on every script.
+RUN chmod +x ./*.sh scripts/*.sh
 
 CMD ["./ruh.sh", "railway"]
