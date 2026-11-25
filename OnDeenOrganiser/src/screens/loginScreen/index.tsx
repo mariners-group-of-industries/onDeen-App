@@ -18,7 +18,6 @@ import styles from './styles';
 import {loginValidationSchema} from '../../helpers/loginValidations';
 import Firstpagelogo from '../../assets/svg/firstpagelogo.svg';
 import {useToast} from '../../context/ToastContext';
-import {REFERENCE_DEMO_LOGIN} from '../../helpers/referenceDemoCredentials';
 
 const LoginScreen = () => {
   const navigation = useNavigation();
@@ -76,7 +75,7 @@ const LoginScreen = () => {
         </View>
         <View style={styles.formikContainer}>
           <Formik
-            initialValues={REFERENCE_DEMO_LOGIN}
+            initialValues={{email_id: '', password: ''}}
             validationSchema={loginValidationSchema}
             onSubmit={handleSubmit}>
             {({handleSubmit: submitForm}) => (

@@ -24,7 +24,6 @@ import LatestHeader from '../../components/LatestHeader';
 import CustomeInput from '../../components/CustomeInput';
 import CustomePassword from '../../components/CustomePassword';
 import { useToastForPopup } from '../../context/ToastContext';
-import { REFERENCE_DEMO_LOGIN } from '../../helpers/referenceDemoCredentials';
 
 const LoginEmailPassword = () => {
   const navigation = useNavigation();
@@ -35,7 +34,7 @@ const LoginEmailPassword = () => {
   const goToSignup = () => navigation.navigate('Signup');
 
   const formik = useFormik({
-    initialValues: REFERENCE_DEMO_LOGIN,
+    initialValues: { email_id: '', password: '' },
     validationSchema: loginValidationSchema,
     onSubmit: (values) => {
       loginUseCheck(values);

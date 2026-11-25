@@ -14,14 +14,12 @@ describe('user authentication options', () => {
     expect(login).not.toContain('<Text style={styles.separatorText}>OR</Text>');
   });
 
-  it('prefills the deterministic reference account without native Google setup at render time', () => {
+  it('starts with an empty login form and no native Google setup at render time', () => {
     const login = read('src/screens/LoginEmailPassword/LoginEmailPassword.jsx');
-    const credentials = read('src/helpers/referenceDemoCredentials.js');
     const constant = read('src/helpers/Constant.tsx');
 
-    expect(login).toContain('initialValues: REFERENCE_DEMO_LOGIN');
-    expect(credentials).toContain("email_id: 'user@gmail.com'");
-    expect(credentials).toContain("password: '123456'");
+    expect(login).toContain("initialValues: { email_id: '', password: '' }");
+    expect(login).not.toContain('123456');
     expect(constant).toContain("GOOGLESIGNINWEBCLIENTID = ''");
     expect(login).not.toContain('GoogleSignin');
   });
